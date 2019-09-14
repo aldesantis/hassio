@@ -4,3 +4,9 @@ known_devices.yaml
 .storage
 .cloud
 .google.token
+*.log
+*.db
+.ios.conf
+.ps4-games.json
+tts
+webostv.conf
