@@ -6,7 +6,7 @@ turn_ac_on:
     service: climate.turn_on
   - data:
       entity_id: all
-      temperature: 26
+      temperature: 25
     service: climate.set_temperature
 turn_ac_off:
   alias: Turn AC off

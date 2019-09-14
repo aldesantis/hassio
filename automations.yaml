@@ -26,7 +26,7 @@
 - id: '1567267391233'
   alias: 'Summer: Turn off AC when it gets cold'
   trigger:
-  - below: '26'
+  - below: '24'
     entity_id: sensor.esterno_salone_temperature
     platform: numeric_state
   condition: []
@@ -56,17 +56,6 @@
   action:
   - data: {}
     service: light.turn_off
-- id: '1567767446481'
-  alias: 'Summer: Turn AC off at night'
-  trigger:
-  - at: '23:00:00'
-    platform: time
-  condition:
-  - below: '26'
-    condition: numeric_state
-    entity_id: sensor.esterno_salone_temperature
-  action:
-  - service: script.turn_ac_off
 - id: '1568486841268'
   alias: Back up to Dropbox
   trigger:
