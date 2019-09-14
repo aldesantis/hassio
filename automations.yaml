@@ -67,3 +67,16 @@
     entity_id: sensor.outside_temperature_salone_outside_temperature
   action:
   - service: script.turn_ac_off
+- id: '1568486841268'
+  alias: Back up to Dropbox
+  trigger:
+  - at: 00:00:00
+    platform: time
+  condition: []
+  action:
+  - service: hassio.snapshot_full
+  - data:
+      addon: 7be23ff5_dropbox_sync
+      input:
+        command: upload
+    service: hassio.addon_stdin
