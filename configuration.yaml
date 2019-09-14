@@ -1,0 +1,60 @@
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+# http:
+#   base_url: example.duckdns.org:8123
+
+# Sensors
+sensor:
+  # Weather prediction
+  - platform: yr
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+wake_on_lan:
+
+media_player:
+  - platform: webostv
+    host: 192.168.1.12
+    turn_on_action:
+      service: wake_on_lan.send_magic_packet
+      data:
+        mac: 'A8:23:FE:25:1F:E1'
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+
+tuya:
+  username: !secret smart_life_username
+  password: !secret smart_life_password
+  country_code: !secret smart_life_country_code
+  platform: smart_life
+
+device_tracker:
+  - platform: nmap_tracker
+    hosts: 192.168.1.0/24
+  - platform: bluetooth_tracker
+
+light:
+  - platform: group
+    name: Comodino sinistro
+    entities:
+      - light.comodino_sinistro_1
+      - light.comodino_sinistro_2
+  - platform: group
+    name: Comodino destro
+    entities:
+      - light.comodino_destro_1
+      - light.comodino_destro_2
+  - platform: group
+    name: Ingresso camera da letto
+    entities:
+      - light.ingresso_camera_da_letto_1
+      - light.ingresso_camera_da_letto_2
+      - light.ingresso_camera_da_letto_3
+      - light.ingresso_camera_da_letto_4
