@@ -21,7 +21,7 @@ views:
     path: people
     title: People
   - badges:
-      - sensor.outside_temperature_salone_outside_temperature
+      - sensor.esterno_salone_temperature
     cards:
       - entity: light.lampada
         type: light
@@ -56,7 +56,7 @@ views:
     path: camera-da-letto
     title: Camera da letto
   - badges:
-      - sensor.outside_temperature_salone_outside_temperature
+      - sensor.esterno_studio_temperature
     cards:
       - entity: climate.studio
         type: thermostat
