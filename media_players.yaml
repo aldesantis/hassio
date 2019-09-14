@@ -1,0 +1,6 @@
+- platform: webostv
+  host: 192.168.1.12
+  turn_on_action:
+    service: wake_on_lan.send_magic_packet
+    data:
+      mac: 'A8:23:FE:25:1F:E1'
