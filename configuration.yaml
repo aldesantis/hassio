@@ -58,3 +58,6 @@ light:
       - light.ingresso_camera_da_letto_2
       - light.ingresso_camera_da_letto_3
       - light.ingresso_camera_da_letto_4
+
+lovelace:
+  mode: yaml
