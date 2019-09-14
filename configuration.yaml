@@ -6,7 +6,6 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 wake_on_lan:
 media_player: !include media_players.yaml
-tuya: !include tuya.yaml
 device_tracker: !include device_trackers.yaml
 light: !include lights.yaml
 lovelace: !include lovelace.yaml

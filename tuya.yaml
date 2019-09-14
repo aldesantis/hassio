@@ -1,4 +1,0 @@
-username: !secret smart_life_username
-password: !secret smart_life_password
-country_code: !secret smart_life_country_code
-platform: smart_life
