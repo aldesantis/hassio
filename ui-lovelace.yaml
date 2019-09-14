@@ -7,19 +7,17 @@ views:
           - entity: device_tracker.ipad_di_alessandro
           - entity: sensor.ipad_di_alessandro_battery_state
           - entity: sensor.ipad_di_alessandro_battery_level
-            name: iPad Battery Level
           - entity: device_tracker.iphone_di_alessandro
           - entity: device_tracker.iphonedessandro_homenet_telecomitalia_it
           - entity: device_tracker.iphone_di_alessandro_bt
           - entity: sensor.iphone_di_alessandro_battery_state
           - entity: sensor.iphone_di_alessandro_battery_level
-            name: iPhone Battery Level
           - entity: device_tracker.mbpdialessandro_homenet_telecomitalia_it
         show_header_toggle: false
         title: Alessandro
         type: entities
     path: people
-    title: People
+    title: Persone
   - badges:
       - sensor.esterno_salone_temperature
     cards:
