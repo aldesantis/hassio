@@ -47,6 +47,8 @@ views:
       - entity: light.ingresso_camera_da_letto
         name: Ingresso
         type: light
+      - entity: light.soffitto_camera_da_letto
+        type: light
       - entity: light.comodino_sinistro
         type: light
       - entity: light.comodino_destro
@@ -56,6 +58,8 @@ views:
   - badges:
       - sensor.esterno_studio_temperature
     cards:
+      - entity: light.soffitto_studio
+        type: light
       - entity: climate.studio
         type: thermostat
     path: studio
