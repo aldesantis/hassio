@@ -16,6 +16,15 @@ views:
         show_header_toggle: false
         title: Alessandro
         type: entities
+      - entities:
+          - entity: person.cloe_filippi
+          - entity: device_tracker.iphone_di_cloe
+          - entity: device_tracker.iphone_di_cloe_wifi
+          - entity: sensor.iphone_di_cloe_battery_state
+          - entity: sensor.iphone_di_cloe_battery_level
+        show_header_toggle: false
+        title: Cloe
+        type: entities
     path: people
     title: Persone
   - badges:
