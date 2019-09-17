@@ -15,3 +15,13 @@
     - light.ingresso_camera_da_letto_2
     - light.ingresso_camera_da_letto_3
     - light.ingresso_camera_da_letto_4
+- platform: group
+  name: Soffitto camera da letto
+  entities:
+    - light.soffitto_camera_da_letto_1
+    - light.soffitto_camera_da_letto_2
+- platform: group
+  name: Soffitto studio
+  entities:
+    - light.soffitto_studio_1
+    - light.soffitto_studio_2
