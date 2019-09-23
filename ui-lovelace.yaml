@@ -67,7 +67,7 @@ views:
   - badges:
       - sensor.esterno_studio_temperature
       - sensor.studio_light_level
-      - binary_sensor.cstudiomotion
+      - binary_sensor.studio_motion
       - sensor.studio_temperature
     cards:
       - entity: light.soffitto_studio
