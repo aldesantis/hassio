@@ -54,7 +54,8 @@
     to: not_home
   condition: []
   action:
-  - data: {}
+  - data:
+      entity_id: all
     service: light.turn_off
 - id: '1568486841268'
   alias: Back up to Dropbox
