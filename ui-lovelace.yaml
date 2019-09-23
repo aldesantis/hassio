@@ -66,6 +66,9 @@ views:
     title: Camera da letto
   - badges:
       - sensor.esterno_studio_temperature
+      - sensor.studio_light_level
+      - binary_sensor.cstudiomotion
+      - sensor.studio_temperature
     cards:
       - entity: light.soffitto_studio
         type: light
@@ -91,3 +94,12 @@ views:
         type: light
     path: bagno-padronale
     title: Bagno padronale
+  - badges:
+      - sensor.cucina_light_level
+      - binary_sensor.cucina_motion
+      - sensor.cucina_temperature
+    cards:
+      - entity: light.cucina
+        type: light
+    path: cucina
+    title: Cucina
