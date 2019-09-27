@@ -72,6 +72,8 @@ views:
     cards:
       - entity: light.soffitto_studio
         type: light
+      - entity: light.ingresso_studio
+        type: light
       - entity: climate.studio
         type: thermostat
     path: studio
@@ -103,3 +105,13 @@ views:
         type: light
     path: cucina
     title: Cucina
+  - cards:
+      - entity: light.vetrina
+        type: light
+    path: sala-da-pranzo
+    title: Sala da pranzo
+  - cards:
+      - entity: light.disimpegno
+        type: light
+    path: disimpegno
+    title: Disimpegno

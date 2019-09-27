@@ -25,3 +25,8 @@
   entities:
     - light.soffitto_studio_1
     - light.soffitto_studio_2
+- platform: group
+  name: Vetrina
+  entities:
+    - light.vetrina_1
+    - light.vetrina_2
