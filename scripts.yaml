@@ -7,7 +7,7 @@ turn_ac_on:
   - data:
       entity_id: all
       hvac_mode: cool
-      temperature: 25
+      temperature: 26
     service: climate.set_temperature
 turn_ac_off:
   alias: Turn AC off
