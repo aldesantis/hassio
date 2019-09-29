@@ -27,50 +27,53 @@ views:
         show_header_toggle: false
         title: Cloe
         type: entities
-  - path: day-area
-    title: Zona giorno
+  - path: climate
+    title: Climatizzazione
     badges:
       - sensor.esterno_salone_temperature
+      - sensor.esterno_studio_temperature
     cards:
-      - entity: light.lampada
-        type: light
+      - entity: climate.salone
+        type: thermostat
+      - entity: climate.studio
+        type: thermostat
+  - path: media
+    title: Media
+    cards:
       - entity: media_player.lg_webos_smart_tv
         type: media-control
       - entity: media_player.playstation_4
         type: media-control
       - entity: media_player.soggiorno
         type: media-control
-      - entity: climate.salone
-        type: thermostat
+  - path: lights
+    title: Luci
+    cards:
       - entity: light.ingresso
         type: light
       - entity: light.cucina
         type: light
       - entity: light.vetrina
         type: light
-  - path: night-area
-    title: Zona notte
-    badges:
-      - sensor.esterno_studio_temperature
-    cards:
+      - entity: light.lampada
+        type: light
+        name: Lampada salone
+      - entity: light.disimpegno
+        type: light
       - entity: light.ingresso_camera_da_letto
-        name: Ingresso
-        type: light
-      - entity: light.soffitto_camera_da_letto
-        type: light
-      - entity: light.comodino_sinistro
-        type: light
-      - entity: light.comodino_destro
-        type: light
-      - entity: light.soffitto_studio
-        type: light
-      - entity: light.ingresso_studio
-        type: light
-      - entity: climate.studio
-        type: thermostat
-      - entity: light.bagno_ospiti
+        name: Ingresso camera da letto
         type: light
       - entity: light.bagno_padronale
         type: light
-      - entity: light.disimpegno
+      - entity: light.comodino_sinistro
+        type: light
+      - entity: light.soffitto_camera_da_letto
+        type: light
+      - entity: light.comodino_destro
+        type: light
+      - entity: light.bagno_ospiti
+        type: light
+      - entity: light.ingresso_studio
+        type: light
+      - entity: light.soffitto_studio
         type: light
