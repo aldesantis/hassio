@@ -1,6 +1,8 @@
 title: Casa
 views:
-  - badges: []
+  - path: people
+    title: Persone
+    badges: []
     cards:
       - entities:
           - entity: person.alessandro_desantis
@@ -25,9 +27,9 @@ views:
         show_header_toggle: false
         title: Cloe
         type: entities
-    path: people
-    title: Persone
-  - badges:
+  - path: day-area
+    title: Zona giorno
+    badges:
       - sensor.esterno_salone_temperature
     cards:
       - entity: light.lampada
@@ -40,18 +42,16 @@ views:
         type: media-control
       - entity: climate.salone
         type: thermostat
-    path: salone
-    title: Salone
-  - badges:
-      - sensor.ingresso_light_level
-      - binary_sensor.ingresso_motion
-      - sensor.ingresso_temperature
-    cards:
       - entity: light.ingresso
         type: light
-    path: ingresso
-    title: Ingresso
-  - badges: []
+      - entity: light.cucina
+        type: light
+      - entity: light.vetrina
+        type: light
+  - path: night-area
+    title: Zona notte
+    badges:
+      - sensor.esterno_studio_temperature
     cards:
       - entity: light.ingresso_camera_da_letto
         name: Ingresso
@@ -62,56 +62,15 @@ views:
         type: light
       - entity: light.comodino_destro
         type: light
-    path: camera-da-letto
-    title: Camera da letto
-  - badges:
-      - sensor.esterno_studio_temperature
-      - sensor.studio_light_level
-      - binary_sensor.studio_motion
-      - sensor.studio_temperature
-    cards:
       - entity: light.soffitto_studio
         type: light
       - entity: light.ingresso_studio
         type: light
       - entity: climate.studio
         type: thermostat
-    path: studio
-    title: Studio
-  - badges:
-      - sensor.bagno_ospiti_light_level
-      - binary_sensor.bagno_ospiti_motion
-      - sensor.bagno_ospiti_temperature
-    cards:
       - entity: light.bagno_ospiti
         type: light
-    path: bagno-ospiti
-    title: Bagno ospiti
-  - badges:
-      - sensor.bagno_padronale_light_level
-      - binary_sensor.bagno_padronale_motion
-      - sensor.bagno_padronale_temperature
-    cards:
       - entity: light.bagno_padronale
         type: light
-    path: bagno-padronale
-    title: Bagno padronale
-  - badges:
-      - sensor.cucina_light_level
-      - binary_sensor.cucina_motion
-      - sensor.cucina_temperature
-    cards:
-      - entity: light.cucina
-        type: light
-    path: cucina
-    title: Cucina
-  - cards:
-      - entity: light.vetrina
-        type: light
-    path: sala-da-pranzo
-    title: Sala da pranzo
-  - cards:
       - entity: light.disimpegno
         type: light
-    path: disimpegno
-    title: Disimpegno
