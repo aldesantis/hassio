@@ -1,14 +1,3 @@
-turn_ac_on:
-  alias: Turn AC on
-  sequence:
-  - data:
-      entity_id: all
-    service: climate.turn_on
-  - data:
-      entity_id: all
-      hvac_mode: cool
-      temperature: 26
-    service: climate.set_temperature
 turn_ac_off:
   alias: Turn AC off
   sequence:

@@ -4,48 +4,11 @@
   - entity_id: group.tutti
     for: 00:30:00
     platform: state
-    to: home
+    to: not_home
   condition: []
   action:
   - data: {}
     service: script.turn_ac_off
-- id: '1567267147737'
-  alias: 'Summer: Turn on AC when someone''s home'
-  trigger:
-  - entity_id: group.tutti
-    for: 00:30:00
-    platform: state
-    to: home
-  condition:
-  - above: '26'
-    condition: numeric_state
-    entity_id: sensor.esterno_salone_temperature
-  action:
-  - data: {}
-    service: script.turn_ac_on
-- id: '1567267391233'
-  alias: 'Summer: Turn off AC when it gets cold'
-  trigger:
-  - below: '24'
-    entity_id: sensor.esterno_salone_temperature
-    platform: numeric_state
-  condition: []
-  action:
-  - data: {}
-    service: script.turn_ac_off
-- id: '1567267823406'
-  alias: 'Summer: Turn on AC when it gets hot'
-  trigger:
-  - above: '26'
-    entity_id: sensor.esterno_salone_temperature
-    platform: numeric_state
-  condition:
-  - condition: state
-    entity_id: group.tutti
-    state: home
-  action:
-  - data: {}
-    service: script.turn_ac_on
 - id: '1567759038729'
   alias: Turn off all lights when no one's home
   trigger:
