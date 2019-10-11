@@ -34,19 +34,13 @@ views:
         type: light
       - entity: media_player.lg_webos_smart_tv
         type: media-control
-      - entity: media_player.playstation_4
-        type: media-control
       - entity: media_player.soggiorno
         type: media-control
       - entity: climate.salone
         type: thermostat
     path: salone
     title: Salone
-  - badges:
-      - sensor.ingresso_light_level
-      - binary_sensor.ingresso_motion
-      - sensor.ingresso_temperature
-    cards:
+  - cards:
       - entity: light.ingresso
         type: light
     path: ingresso
@@ -66,9 +60,6 @@ views:
     title: Camera da letto
   - badges:
       - sensor.esterno_studio_temperature
-      - sensor.studio_light_level
-      - binary_sensor.studio_motion
-      - sensor.studio_temperature
     cards:
       - entity: light.soffitto_studio
         type: light
@@ -78,29 +69,17 @@ views:
         type: thermostat
     path: studio
     title: Studio
-  - badges:
-      - sensor.bagno_ospiti_light_level
-      - binary_sensor.bagno_ospiti_motion
-      - sensor.bagno_ospiti_temperature
-    cards:
+  - cards:
       - entity: light.bagno_ospiti
         type: light
     path: bagno-ospiti
     title: Bagno ospiti
-  - badges:
-      - sensor.bagno_padronale_light_level
-      - binary_sensor.bagno_padronale_motion
-      - sensor.bagno_padronale_temperature
-    cards:
+  - cards:
       - entity: light.bagno_padronale
         type: light
     path: bagno-padronale
     title: Bagno padronale
-  - badges:
-      - sensor.cucina_light_level
-      - binary_sensor.cucina_motion
-      - sensor.cucina_temperature
-    cards:
+  - cards:
       - entity: light.cucina
         type: light
     path: cucina
