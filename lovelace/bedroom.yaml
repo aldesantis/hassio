@@ -11,9 +11,9 @@ cards:
     type: light
   - type: entities
     entities:
-      - entity_id: cover.camera_da_letto_centrale
+      - entity: cover.camera_da_letto_centrale
         name: Centrale
-      - entity_id: cover.camera_da_letto_laterale
+      - entity: cover.camera_da_letto_laterale
         name: Laterale
 path: camera-da-letto
 title: Camera da letto
