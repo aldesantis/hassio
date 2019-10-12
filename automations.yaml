@@ -3,8 +3,7 @@
   trigger:
     - entity_id: group.tutti
       platform: state
-      to: not_home
-      for: 00:05:00
+      from: home
   condition: []
   action:
     - service: script.turn_ac_off
@@ -13,8 +12,7 @@
   trigger:
     - entity_id: group.tutti
       platform: state
-      to: not_home
-      for: 00:05:00
+      from: home
   condition: []
   action:
     - data:
