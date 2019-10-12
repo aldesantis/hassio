@@ -1,6 +1,7 @@
 title: Luci
 path: lights
 badges: []
+icon: mdi:lightbulb-outline
 cards:
   - type: entities
     title: Ingresso

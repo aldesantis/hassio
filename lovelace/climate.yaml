@@ -1,5 +1,6 @@
 title: Climatizzazione
 path: climate
+icon: mdi:home-thermometer
 badges: []
 cards:
   - type: vertical-stack

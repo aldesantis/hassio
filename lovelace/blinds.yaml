@@ -1,5 +1,6 @@
 title: Tende
 path: blinds
+icon: mdi:blinds
 badges: []
 cards:
   - type: entities
