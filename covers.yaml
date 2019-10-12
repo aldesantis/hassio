@@ -1,5 +1,0 @@
-- platform: group
-  name: Tende camera da letto
-  entities:
-    - cover.tenda_camera_da_letto_1
-    - cover.tenda_camera_da_letto_2
