@@ -9,5 +9,7 @@ badges: []
       type: light
     - entity: light.comodino_destro
       type: light
+    - entity: cover.tende_camera_da_letto
+      type: cover
   path: camera-da-letto
   title: Camera da letto
