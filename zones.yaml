@@ -1,0 +1,27 @@
+- name: Home
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+
+- name: Ufficio
+  latitude: !secret work_latitude
+  longitude: !secret work_longitude
+  radius: 500
+
+- name: Accademia Circo Massimo
+  latitude: !secret circo_massimo_latitude
+  longitude: !secret circo_massimo_longitude
+  radius: 500
+
+- name: Accademia Furio Camillo
+  latitude: !secret furio_camillo_latitude
+  longitude: !secret furio_camillo_longitude
+  radius: 500
+
+- name: Fonderia delle Arti
+  latitude: !secret fonderia_latitude
+  longitude: !secret fonderia_longitude
+  radius: 500
+
+- name: Accademia Garbatella
+  latitude: !secret garbatella_latitude
+  longitude: !secret garbatella_longitude
