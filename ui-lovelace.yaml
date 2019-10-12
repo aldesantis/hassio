@@ -1,96 +1,12 @@
 title: Casa
 views:
-  - badges: []
-    cards:
-      - entities:
-          - entity: person.alessandro_desantis
-          - entity: device_tracker.ipad_di_alessandro
-          - entity: sensor.ipad_di_alessandro_battery_state
-          - entity: sensor.ipad_di_alessandro_battery_level
-          - entity: device_tracker.iphone_di_alessandro
-          - entity: device_tracker.iphonedessandro_homenet_telecomitalia_it
-          - entity: device_tracker.iphone_di_alessandro_bt
-          - entity: sensor.iphone_di_alessandro_battery_state
-          - entity: sensor.iphone_di_alessandro_battery_level
-          - entity: device_tracker.mbpdialessandro_homenet_telecomitalia_it
-        show_header_toggle: false
-        title: Alessandro
-        type: entities
-      - entities:
-          - entity: person.cloe_filippi
-          - entity: device_tracker.iphone_di_cloe
-          - entity: device_tracker.iphone_di_cloe_wifi
-          - entity: sensor.iphone_di_cloe_battery_state
-          - entity: sensor.iphone_di_cloe_battery_level
-        show_header_toggle: false
-        title: Cloe
-        type: entities
-    path: people
-    title: Persone
-  - badges:
-      - sensor.esterno_salone_temperature
-    cards:
-      - entity: light.lampada
-        type: light
-      - entity: media_player.lg_webos_smart_tv
-        type: media-control
-      - entity: media_player.soggiorno
-        type: media-control
-      - entity: climate.salone
-        type: thermostat
-    path: salone
-    title: Salone
-  - cards:
-      - entity: light.ingresso
-        type: light
-    path: ingresso
-    title: Ingresso
-  - badges: []
-    cards:
-      - entity: light.ingresso_camera_da_letto
-        name: Ingresso
-        type: light
-      - entity: light.soffitto_camera_da_letto
-        type: light
-      - entity: light.comodino_sinistro
-        type: light
-      - entity: light.comodino_destro
-        type: light
-    path: camera-da-letto
-    title: Camera da letto
-  - badges:
-      - sensor.esterno_studio_temperature
-    cards:
-      - entity: light.soffitto_studio
-        type: light
-      - entity: light.ingresso_studio
-        type: light
-      - entity: climate.studio
-        type: thermostat
-    path: studio
-    title: Studio
-  - cards:
-      - entity: light.bagno_ospiti
-        type: light
-    path: bagno-ospiti
-    title: Bagno ospiti
-  - cards:
-      - entity: light.bagno_padronale
-        type: light
-    path: bagno-padronale
-    title: Bagno padronale
-  - cards:
-      - entity: light.cucina
-        type: light
-    path: cucina
-    title: Cucina
-  - cards:
-      - entity: light.vetrina
-        type: light
-    path: sala-da-pranzo
-    title: Sala da pranzo
-  - cards:
-      - entity: light.disimpegno
-        type: light
-    path: disimpegno
-    title: Disimpegno
+  - !include lovelace/people.yaml
+  - !include lovelace/living_room.yaml
+  - !include lovelace/entrance.yaml
+  - !include lovelace/bedroom.yaml
+  - !include lovelace/office.yaml
+  - !include lovelace/guest_bathroom.yaml
+  - !include lovelace/master_bathroom.yaml
+  - !include lovelace/kitchen.yaml
+  - !include lovelace/dining_room.yaml
+  - !include lovelace/hallway.yaml

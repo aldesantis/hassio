@@ -1,0 +1,5 @@
+cards:
+  - entity: light.ingresso
+    type: light
+  path: ingresso
+  title: Ingresso
