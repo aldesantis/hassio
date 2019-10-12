@@ -1,8 +1,10 @@
 path: people
 title: Persone
 badges:
-  - person.alessandro_desantis
-  - person.cloe_filippi
+  - entity: person.alessandro_desantis
+    name: Alessandro
+  - entity: person.cloe_filippi
+    name: Cloe
 cards:
   - type: glance
     title: Alessandro
