@@ -9,16 +9,16 @@ cards:
     entities:
       - entity: group.iphone_di_alessandro
         name: iPhone
-        icon: mdi:phone_iphone
+        icon: mdi:cellphone-text
       - entity: group.ipad_di_alessandro
         name: iPad
-        icon: mdi:tablet_mac
+        icon: mdi:tablet-dashboard
       - entity: group.mbpro_di_alessandro
         name: MacBook Pro
-        icon: mdi:laptop_mac
+        icon: mdi:desktop-mac-dashboard
   - type: glance
     title: Cloe
     entities:
       - entity: group.iphone_di_cloe
         name: iPhone
-        icon: mdi:phone_iphone
+        icon: mdi:cellphone-text
