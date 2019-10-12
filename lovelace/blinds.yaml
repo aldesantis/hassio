@@ -1,0 +1,11 @@
+title: Tende
+path: blinds
+badges: []
+cards:
+  - type: entities
+    title: Camera da letto
+    entities:
+      - entity: cover.camera_da_letto_centrale
+        name: Centrale
+      - entity: cover.camera_da_letto_laterale
+        name: Laterale

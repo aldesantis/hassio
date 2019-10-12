@@ -1,0 +1,20 @@
+title: Climatizzazione
+path: climate
+badges: []
+cards:
+  - type: vertical-stack
+    cards:
+      - type: thermostat
+        entity: climate.salone
+      - type: glance
+        entities:
+          - sensor.esterno_salone_temperature
+          - sensor.interno_salone_temperature
+  - type: vertical-stack
+    cards:
+      - type: thermostat
+        entity: climate.studio
+      - type: glance
+        entities:
+          - sensor.esterno_studio_temperature
+          - sensor.interno_studio_temperature

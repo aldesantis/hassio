@@ -1,0 +1,8 @@
+title: Intrattenimento
+path: entertainment
+badges: []
+cards:
+  - entity: media_player.lg_webos_smart_tv
+    type: media-control
+  - entity: media_player.soggiorno
+    type: media-control

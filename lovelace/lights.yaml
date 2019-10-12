@@ -1,0 +1,44 @@
+title: Luci
+path: lights
+badges: []
+cards:
+  - type: entities
+    title: Ingresso
+    entities:
+      - light.ingresso
+  - type: entities
+    title: Sala da pranzo
+    entities:
+      - light.vetrina
+  - type: entities
+    title: Cucina
+    entities:
+      - light.cucina
+  - type: entities
+    title: Salone
+    entities:
+      - light.lampada
+  - type: entities
+    title: Disimpegno
+    entities:
+      - light.disimpegno
+  - type: entities
+    title: Camera da letto
+    entities:
+      - light.ingresso_camera_da_letto
+      - light.soffitto_camera_da_letto
+      - light.comodino_sinistro
+      - light.comodino_destro
+  - type: entities
+    title: Bagno padronale
+    entities:
+      - light.bagno_padronale
+  - type: entities
+    title: Bagno ospiti
+    entities:
+      - light.bagno_ospiti
+  - type: entities
+    title: Studio
+    entities:
+      - light.ingresso_studio
+      - light.soffitto_studio

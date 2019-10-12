@@ -1,3 +1,5 @@
+path: people
+title: Persone
 badges: []
 cards:
   - entities:
@@ -20,5 +22,3 @@ cards:
     show_header_toggle: false
     title: Cloe
     type: entities
-path: people
-title: Persone
