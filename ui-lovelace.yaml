@@ -1,12 +1,12 @@
 title: Casa
 views:
   - !include lovelace/people.yaml
-  - !include lovelace/living_room.yaml
   - !include lovelace/entrance.yaml
-  - !include lovelace/bedroom.yaml
-  - !include lovelace/office.yaml
-  - !include lovelace/guest_bathroom.yaml
-  - !include lovelace/master_bathroom.yaml
-  - !include lovelace/kitchen.yaml
+  - !include lovelace/living_room.yaml
   - !include lovelace/dining_room.yaml
+  - !include lovelace/kitchen.yaml
   - !include lovelace/hallway.yaml
+  - !include lovelace/bedroom.yaml
+  - !include lovelace/master_bathroom.yaml
+  - !include lovelace/guest_bathroom.yaml
+  - !include lovelace/office.yaml
