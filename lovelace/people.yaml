@@ -1,6 +1,6 @@
 path: people
 title: Persone
-icon: mdi:people
+icon: mdi:account-group
 badges:
   - entity: person.alessandro_desantis
     name: Alessandro
