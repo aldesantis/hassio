@@ -1,24 +1,44 @@
 path: people
 title: Persone
-badges: []
+badges:
+  - person.alessandro_desantis
+  - person.cloe_filippi
 cards:
-  - entities:
-      - entity: person.alessandro_desantis
-      - entity: device_tracker.iphone_di_alessandro
-      - entity: device_tracker.iphone_di_alessandro_wifi
-      - entity: device_tracker.iphone_di_alessandro_bt
-      - entity: device_tracker.ipad_di_alessandro
-      - entity: device_tracker.ipad_di_alessandro_wifi
-      - entity: device_tracker.ipad_di_alessandro_bt
-      - entity: device_tracker.mbpro_di_alessandro_wifi
-      - entity: device_tracker.mbpro_di_alessandro_bt
-    show_header_toggle: false
+  - type: vertical-stack
     title: Alessandro
-    type: entities
-  - entities:
-      - entity: person.cloe_filippi
-      - entity: device_tracker.iphone_di_cloe
-      - entity: device_tracker.iphone_di_cloe_wifi
-    show_header_toggle: false
+    cards:
+      - type: glance
+        title: iPhone
+        entities:
+          - entity: device_tracker.iphone_di_alessandro
+            name: GPS
+          - entity: device_tracker.iphone_di_alessandro_wifi
+            name: Wi-Fi
+          - entity: device_tracker.iphone_di_alessandro_bt
+            name: Bluetooth
+      - type: glance
+        title: iPad
+        entities:
+          - entity: device_tracker.ipad_di_alessandro
+            name: GPS
+          - entity: device_tracker.ipad_di_alessandro_wifi
+            name: Wi-Fi
+          - entity: device_tracker.ipad_di_alessandro_bt
+            name: Bluetooth
+      - type: glance
+        title: MacBook Pro
+        entities:
+          - entity: device_tracker.mbpro_di_alessandro_wifi
+            name: Wi-Fi
+          - entity: device_tracker.mbpro_di_alessandro_bt
+            name: Bluetooth
+  - type: vertical-stack
     title: Cloe
-    type: entities
+    cards:
+      - type: glance
+        title: iPhone
+        entities:
+          - entity: device_tracker.iphone_di_cloe
+            name: GPS
+          - entity: device_tracker.iphone_di_cloe_wifi
+            name: Wi-Fi
