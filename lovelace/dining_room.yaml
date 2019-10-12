@@ -1,5 +1,5 @@
 cards:
   - entity: light.vetrina
     type: light
-  path: sala-da-pranzo
-  title: Sala da pranzo
+path: sala-da-pranzo
+title: Sala da pranzo

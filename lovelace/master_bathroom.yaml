@@ -1,5 +1,5 @@
 cards:
   - entity: light.bagno_padronale
     type: light
-  path: bagno-padronale
-  title: Bagno padronale
+path: bagno-padronale
+title: Bagno padronale

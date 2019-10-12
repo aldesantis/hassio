@@ -1,5 +1,5 @@
 cards:
   - entity: light.bagno_ospiti
     type: light
-  path: bagno-ospiti
-  title: Bagno ospiti
+path: bagno-ospiti
+title: Bagno ospiti

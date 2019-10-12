@@ -1,11 +1,11 @@
 badges:
   - sensor.esterno_studio_temperature
-  cards:
-    - entity: light.soffitto_studio
-      type: light
-    - entity: light.ingresso_studio
-      type: light
-    - entity: climate.studio
-      type: thermostat
-  path: studio
-  title: Studio
+cards:
+  - entity: light.soffitto_studio
+    type: light
+  - entity: light.ingresso_studio
+    type: light
+  - entity: climate.studio
+    type: thermostat
+path: studio
+title: Studio
