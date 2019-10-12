@@ -4,6 +4,7 @@
     - entity_id: group.tutti
       platform: state
       to: not_home
+      for: 00:05:00
   condition: []
   action:
     - service: script.turn_ac_off
@@ -13,6 +14,7 @@
     - entity_id: group.tutti
       platform: state
       to: not_home
+      for: 00:05:00
   condition: []
   action:
     - data:
