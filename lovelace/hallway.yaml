@@ -1,0 +1,5 @@
+cards:
+  - entity: light.disimpegno
+    type: light
+  path: disimpegno
+  title: Disimpegno

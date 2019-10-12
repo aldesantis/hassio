@@ -1,0 +1,5 @@
+cards:
+  - entity: light.cucina
+    type: light
+  path: cucina
+  title: Cucina
