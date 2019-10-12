@@ -9,7 +9,8 @@ cards:
     type: light
   - entity: light.comodino_destro
     type: light
-  - entity: cover.tende_camera_da_letto
-    type: cover
+  - type: entities
+    entities:
+      - cover.tende_camera_da_letto
 path: camera-da-letto
 title: Camera da letto
