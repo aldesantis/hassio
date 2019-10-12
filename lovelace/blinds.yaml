@@ -5,6 +5,7 @@ badges: []
 cards:
   - type: entities
     title: Camera da letto
+    show_header_toggle: false
     entities:
       - entity: cover.camera_da_letto_centrale
         name: Centrale
