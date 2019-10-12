@@ -3,3 +3,29 @@ tutti:
   entities:
     - person.alessandro_desantis
     - person.cloe_filippi
+
+iphone_di_alessandro:
+  name: iPhone di Alessandro
+  entities:
+    - device_tracker.iphone_di_alessandro
+    - device_tracker.iphone_di_alessandro_wifi
+    - device_tracker.iphone_di_alessandro_bt
+
+ipad_di_alessandro:
+  name: iPad di Alessandro
+  entities:
+    - device_tracker.ipad_di_alessandro
+    - device_tracker.ipad_di_alessandro_wifi
+    - device_tracker.ipad_di_alessandro_bt
+
+macbook_pro_di_alessandro:
+  name: MacBook Pro di Alessandro
+  entities:
+    - device_tracker.mbpro_di_alessandro_wifi
+    - device_tracker.mbpro_di_alessandro_bt
+
+iphone_di_cloe:
+  name: iPhone di Cloe
+  entities:
+    - device_tracker.iphone_di_cloe
+    - device_tracker.iphone_di_cloe_wifi

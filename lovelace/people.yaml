@@ -4,41 +4,21 @@ badges:
   - person.alessandro_desantis
   - person.cloe_filippi
 cards:
-  - type: vertical-stack
+  - type: glance
     title: Alessandro
-    cards:
-      - type: glance
-        title: iPhone
-        entities:
-          - entity: device_tracker.iphone_di_alessandro
-            name: GPS
-          - entity: device_tracker.iphone_di_alessandro_wifi
-            name: Wi-Fi
-          - entity: device_tracker.iphone_di_alessandro_bt
-            name: Bluetooth
-      - type: glance
-        title: iPad
-        entities:
-          - entity: device_tracker.ipad_di_alessandro
-            name: GPS
-          - entity: device_tracker.ipad_di_alessandro_wifi
-            name: Wi-Fi
-          - entity: device_tracker.ipad_di_alessandro_bt
-            name: Bluetooth
-      - type: glance
-        title: MacBook Pro
-        entities:
-          - entity: device_tracker.mbpro_di_alessandro_wifi
-            name: Wi-Fi
-          - entity: device_tracker.mbpro_di_alessandro_bt
-            name: Bluetooth
-  - type: vertical-stack
+    entities:
+      - entity: group.iphone_di_alessandro
+        name: iPhone
+        icon: mdi:phone_iphone
+      - entity: group.ipad_di_alessandro
+        name: iPad
+        icon: mdi:tablet_mac
+      - entity: group.mbpro_di_alessandro
+        name: MacBook Pro
+        icon: mdi:laptop_mac
+  - type: glance
     title: Cloe
-    cards:
-      - type: glance
-        title: iPhone
-        entities:
-          - entity: device_tracker.iphone_di_cloe
-            name: GPS
-          - entity: device_tracker.iphone_di_cloe_wifi
-            name: Wi-Fi
+    entities:
+      - entity: group.iphone_di_cloe
+        name: iPhone
+        icon: mdi:phone_iphone
