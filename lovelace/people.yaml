@@ -3,10 +3,10 @@ cards:
   - entities:
       - entity: person.alessandro_desantis
       - entity: device_tracker.iphone_di_alessandro
-      - entity: device_tracker.iphonedessandro_homenet_telecomitalia_it
+      - entity: device_tracker.iphone_di_alessandro_wifi
       - entity: device_tracker.iphone_di_alessandro_bt
       - entity: device_tracker.ipad_di_alessandro
-      - entity: device_tracker.mbpdialessandro_homenet_telecomitalia_it
+      - entity: device_tracker.mbpro_di_alessandro_wifi
     show_header_toggle: false
     title: Alessandro
     type: entities
