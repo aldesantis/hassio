@@ -18,7 +18,7 @@ ipad_di_alessandro:
     - device_tracker.ipad_di_alessandro_wifi
     - device_tracker.ipad_di_alessandro_bt
 
-macbook_pro_di_alessandro:
+mbpro_di_alessandro:
   name: MacBook Pro di Alessandro
   entities:
     - device_tracker.mbpro_di_alessandro_wifi
