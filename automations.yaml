@@ -1,35 +1,33 @@
 - id: '1567267090938'
-  alias: 'Summer: Turn off AC when no one''s home'
+  alias: Turn off AC when no one's home
   trigger:
-  - entity_id: group.tutti
-    for: 00:30:00
-    platform: state
-    to: not_home
+    - entity_id: group.tutti
+      platform: state
+      to: not_home
   condition: []
   action:
-  - data: {}
-    service: script.turn_ac_off
+    - service: script.turn_ac_off
 - id: '1567759038729'
   alias: Turn off all lights when no one's home
   trigger:
-  - entity_id: group.tutti
-    platform: state
-    to: not_home
+    - entity_id: group.tutti
+      platform: state
+      to: not_home
   condition: []
   action:
-  - data:
-      entity_id: all
-    service: light.turn_off
+    - data:
+        entity_id: all
+      service: light.turn_off
 - id: '1568486841268'
   alias: Back up to Dropbox
   trigger:
-  - at: 00:00:00
-    platform: time
+    - at: 00:00:00
+      platform: time
   condition: []
   action:
-  - service: hassio.snapshot_full
-  - data:
-      addon: 7be23ff5_dropbox_sync
-      input:
-        command: upload
-    service: hassio.addon_stdin
+    - service: hassio.snapshot_full
+    - data:
+        addon: 7be23ff5_dropbox_sync
+        input:
+          command: upload
+      service: hassio.addon_stdin
