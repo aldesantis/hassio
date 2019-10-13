@@ -7,3 +7,5 @@ cards:
     type: media-control
   - entity: media_player.soggiorno
     type: media-control
+  - entity: media_player.playstation_4
+    type: media-control
