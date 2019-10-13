@@ -4,8 +4,10 @@ icon: mdi:account-group
 badges:
   - entity: person.alessandro_desantis
     name: Alessandro
+    image: /local/people/alessandro.jpg
   - entity: person.cloe_filippi
     name: Cloe
+    image: /local/people/cloe.jpg
 cards:
   - type: glance
     title: Alessandro
