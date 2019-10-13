@@ -7,7 +7,7 @@ tutti:
 iphone_di_alessandro:
   name: iPhone di Alessandro
   entities:
-    - device_tracker.iphone_di_alessandro
+    - device_tracker.iphone_di_alessandro_gps
     - device_tracker.iphone_di_alessandro_wifi
     - device_tracker.iphone_di_alessandro_bt
 
