@@ -9,3 +9,10 @@ cards:
     type: media-control
   - entity: media_player.playstation_4
     type: media-control
+  - type: glance
+    title: Stampante
+    entities:
+      - sensor.bk
+      - sensor.c
+      - sensor.y
+      - sensor.m
