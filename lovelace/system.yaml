@@ -1,0 +1,27 @@
+path: system
+title: Sistema
+icon: mdi:server
+badges: []
+cards:
+  - type: horizontal-stack
+    cards:
+      - type: gauge
+        entity: sensor.disk_use_percent
+        name: Disk
+      - type: gauge
+        entity: sensor.memory_use_percent
+        name: Memory
+      - type: gauge
+        entity: sensor.processor_use
+        name: CPU
+  - type: glance
+    title: Speedtest
+    entities:
+      - entity: sensor.speedtest_ping
+        name: Ping
+        icon: mdi:wifi-star
+      - entity: sensor.speedtest_download
+        name: Download
+        icon: mdi:progress-download
+      - entity: sensor.speedtest_upload
+        name: Upload

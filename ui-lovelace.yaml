@@ -5,3 +5,4 @@ views:
   - !include lovelace/lights.yaml
   - !include lovelace/blinds.yaml
   - !include lovelace/entertainment.yaml
+  - !include lovelace/system.yaml

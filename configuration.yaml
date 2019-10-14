@@ -9,9 +9,7 @@ device_tracker: !include device_trackers.yaml
 light: !include lights.yaml
 lovelace: !include lovelace.yaml
 zone: !include zones.yaml
+speedtestdotnet:
 sensor:
-  - platform: cups
-    is_cups_server: false
-    host: !secret printer_host
-    printers:
-      - ipp/print
+  - !include cups.yaml
+  - !include system_monitor.yaml
