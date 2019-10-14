@@ -3,6 +3,17 @@ title: Sistema
 icon: mdi:server
 badges: []
 cards:
+  - type: horizontal-stack
+    cards:
+      - type: gauge
+        entity: sensor.disk_use_percent
+        name: Disk
+      - type: gauge
+        entity: sensor.memory_use_percent
+        name: Memory
+      - type: gauge
+        entity: sensor.processor_use
+        name: CPU
   - type: glance
     title: Speedtest
     entities:
@@ -14,4 +25,3 @@ cards:
         icon: mdi:progress-download
       - entity: sensor.speedtest_upload
         name: Upload
-        icon: mdi:progress-upload
