@@ -33,7 +33,6 @@
     service: hassio.addon_stdin
 - id: '1574456791337'
   alias: Notify Cloe when Alessandro gets home
-  description: ''
   trigger:
   - entity_id: person.alessandro_desantis
     event: enter
@@ -46,7 +45,6 @@
     service: notify.notify
 - id: '1574456831122'
   alias: Notify Alessandro when Cloe gets home
-  description: ''
   trigger:
   - entity_id: person.cloe_filippi
     event: enter
