@@ -6,3 +6,4 @@ views:
   - !include lovelace/blinds.yaml
   - !include lovelace/entertainment.yaml
   - !include lovelace/system.yaml
+  - !include lovelace/scripts.yaml

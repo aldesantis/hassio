@@ -4,3 +4,16 @@ turn_ac_off:
   - data:
       entity_id: all
     service: climate.turn_off
+goodnight:
+  alias: Goodnight
+  sequence:
+  - service: light.turn_off
+    data:
+      entity_id: all
+  - service: script.turn_ac_off
+  - service: cover.close_cover
+    data:
+      entity_id: all
+  - service: media_player.turn_off
+    data:
+      entity_id: media_player.lg_webos_smart_tv
