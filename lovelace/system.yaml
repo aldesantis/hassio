@@ -1,6 +1,6 @@
 path: system
 title: Sistema
-icon: fas:server
+icon: far:server
 badges: []
 cards:
   - type: horizontal-stack
@@ -19,10 +19,10 @@ cards:
     entities:
       - entity: sensor.speedtest_ping
         name: Ping
-        icon: fas:wifi
+        icon: far:wifi
       - entity: sensor.speedtest_download
         name: Download
-        icon: fas:download
+        icon: far:download
       - entity: sensor.speedtest_upload
         name: Upload
-        icon: fas:upload
+        icon: far:upload
