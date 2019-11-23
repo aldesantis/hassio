@@ -7,5 +7,6 @@ cards:
     name: Buonanotte
     entity: script.goodnight
     icon: fas:moon
-    tap_action: call-service
-    service: script.goodnight
+    tap_action:
+      action: call-service
+      service: script.goodnight
