@@ -14,10 +14,10 @@ cards:
     entities:
       - entity: group.iphone_di_alessandro
         name: iPhone
-        icon: fas:mobile
+        icon: fas:mobile-alt
       - entity: group.ipad_di_alessandro
         name: iPad
-        icon: fas:tablet
+        icon: fas:tablet-alt
       - entity: group.mbpro_di_alessandro
         name: MacBook Pro
         icon: fas:laptop
@@ -26,4 +26,4 @@ cards:
     entities:
       - entity: group.iphone_di_cloe
         name: iPhone
-        icon: fas:mobile
+        icon: fas:mobile-alt
