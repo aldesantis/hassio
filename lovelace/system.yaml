@@ -1,6 +1,6 @@
 path: system
 title: Sistema
-icon: mdi:server
+icon: fas:server
 badges: []
 cards:
   - type: horizontal-stack
@@ -19,9 +19,10 @@ cards:
     entities:
       - entity: sensor.speedtest_ping
         name: Ping
-        icon: mdi:wifi-star
+        icon: fas:wifi
       - entity: sensor.speedtest_download
         name: Download
-        icon: mdi:progress-download
+        icon: fas:download
       - entity: sensor.speedtest_upload
         name: Upload
+        icon: fas:upload

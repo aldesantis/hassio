@@ -1,7 +1,7 @@
 title: Intrattenimento
 path: entertainment
 badges: []
-icon: mdi:television-classic
+icon: fas:tv
 cards:
   - entity: media_player.lg_webos_smart_tv
     type: media-control
