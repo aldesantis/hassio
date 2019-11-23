@@ -1,6 +1,6 @@
 path: people
 title: Persone
-icon: far:users
+icon: fas:users
 badges:
   - entity: person.alessandro_desantis
     name: Alessandro
@@ -14,16 +14,16 @@ cards:
     entities:
       - entity: group.iphone_di_alessandro
         name: iPhone
-        icon: far:mobile
+        icon: fas:mobile
       - entity: group.ipad_di_alessandro
         name: iPad
-        icon: far:tablet
+        icon: fas:tablet
       - entity: group.mbpro_di_alessandro
         name: MacBook Pro
-        icon: far:laptop
+        icon: fas:laptop
   - type: glance
     title: Cloe
     entities:
       - entity: group.iphone_di_cloe
         name: iPhone
-        icon: far:mobile
+        icon: fas:mobile

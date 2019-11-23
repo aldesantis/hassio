@@ -1,11 +1,11 @@
 title: Script
 path: scripts
-icon: far:play
+icon: fas:play
 badges: []
 cards:
   - type: entity-button
     name: Buonanotte
     entity: script.goodnight
-    icon: far:moon
+    icon: fas:moon
     tap_action: call-service
     service: script.goodnight
