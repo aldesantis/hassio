@@ -29,3 +29,9 @@ iphone_di_cloe:
   entities:
     - device_tracker.iphone_di_cloe
     - device_tracker.iphone_di_cloe_wifi
+
+laptop_di_cloe:
+  name: Laptop di Cloe
+  entities:
+    - device_tracker.laptop_di_cloe_wifi
+    - device_tracker.laptop_di_cloe_bt

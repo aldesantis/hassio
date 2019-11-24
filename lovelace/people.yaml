@@ -27,3 +27,6 @@ cards:
       - entity: group.iphone_di_cloe
         name: iPhone
         icon: fas:mobile-alt
+      - entity: group.laptop_di_cloe
+        name: Laptop
+        icon: fas:laptop
