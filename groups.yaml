@@ -14,7 +14,7 @@ iphone_di_alessandro:
 ipad_di_alessandro:
   name: iPad di Alessandro
   entities:
-    - device_tracker.ipad_di_alessandro
+    - device_tracker.ipad_di_alessandro_gps
     - device_tracker.ipad_di_alessandro_wifi
     - device_tracker.ipad_di_alessandro_bt
 
