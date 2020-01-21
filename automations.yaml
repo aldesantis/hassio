@@ -1,23 +1,14 @@
 - id: '1567267090938'
-  alias: Turn off AC when away
+  alias: Turn devices off when away
   trigger:
   - entity_id: group.tutti
     platform: state
     from: home
   condition: []
   action:
-  - service: script.turn_ac_off
-- id: '1567759038729'
-  alias: Turn off lights when away
-  trigger:
-  - entity_id: group.tutti
-    platform: state
-    from: home
-  condition: []
-  action:
-  - data:
-      entity_id: all
-    service: light.turn_off
+    - service: script.turn_ac_off
+    - service: script.turn_lights_off
+    - service: script.turn_tv_off
 - id: '1568486841268'
   alias: Back up to Dropbox nightly
   trigger:

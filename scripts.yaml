@@ -4,6 +4,7 @@ turn_ac_off:
   - data:
       entity_id: all
     service: climate.turn_off
+
 turn_lights_off:
   alias: Turn lights off
   sequence:
@@ -18,14 +19,27 @@ turn_lights_off:
           - light.bagno_ospiti
           - light.bagno_padronale
           - light.studio
+
+close_blinds:
+  alias: Close the blinds
+  sequence:
+    - service: cover.close_cover
+      data:
+        entity_id:
+          - cover.camera_da_letto_centrale
+          - cover.camera_da_letto_laterale
+
+turn_tv_off:
+  alias: Turn TV off
+  sequence:
+    - service: media_player.turn_off
+      data:
+        entity_id: media_player.lg_webos_smart_tv
+
 goodnight:
   alias: Goodnight
   sequence:
-  - service: script.turn_lights_off
-  - service: script.turn_ac_off
-  - service: cover.close_cover
-    data:
-      entity_id: all
-  - service: media_player.turn_off
-    data:
-      entity_id: media_player.lg_webos_smart_tv
+    - service: script.turn_lights_off
+    - service: script.turn_ac_off
+    - service: script.turn_tv_off
+    - service: script.close_blinds
