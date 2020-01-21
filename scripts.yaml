@@ -4,12 +4,24 @@ turn_ac_off:
   - data:
       entity_id: all
     service: climate.turn_off
+turn_lights_off:
+  alias: Turn lights off
+  sequence:
+    - service: light.turn_off
+      data:
+        entity_id:
+          - light.camera_da_letto
+          - light.vetrina
+          - light.cucina
+          - light.ingresso
+          - light.lampada
+          - light.bagno_ospiti
+          - light.bagno_padronale
+          - light.studio
 goodnight:
   alias: Goodnight
   sequence:
-  - service: light.turn_off
-    data:
-      entity_id: all
+  - service: script.turn_lights_off
   - service: script.turn_ac_off
   - service: cover.close_cover
     data:
