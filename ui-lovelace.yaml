@@ -1,9 +1,9 @@
 title: Casa
 views:
-  - !include lovelace/people.yaml
-  - !include lovelace/climate.yaml
-  - !include lovelace/lights.yaml
-  - !include lovelace/blinds.yaml
-  - !include lovelace/entertainment.yaml
-  - !include lovelace/system.yaml
-  - !include lovelace/scripts.yaml
+  - !include ui-lovelace/people.yaml
+  - !include ui-lovelace/climate.yaml
+  - !include ui-lovelace/lights.yaml
+  - !include ui-lovelace/blinds.yaml
+  - !include ui-lovelace/entertainment.yaml
+  - !include ui-lovelace/system.yaml
+  - !include ui-lovelace/scripts.yaml

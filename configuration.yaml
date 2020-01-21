@@ -1,14 +1,14 @@
 default_config:
-tts: !include tts.yaml
-group: !include groups.yaml
-automation: !include automations.yaml
-script: !include scripts.yaml
+group: !include configuration/groups.yaml
+automation: !include configuration/automations.yaml
+script: !include configuration/scripts.yaml
 wake_on_lan:
-device_tracker: !include device_trackers.yaml
-lovelace: !include lovelace.yaml
-zone: !include zones.yaml
+device_tracker: !include configuration/device_trackers.yaml
+lovelace:
+  mode: yaml
+zone: !include configuration/zones.yaml
 speedtestdotnet:
 sensor:
-  - !include cups.yaml
-  - !include system_monitor.yaml
-webostv: !include webostv.yaml
+  - !include configuration/cups.yaml
+  - !include configuration/system_monitor.yaml
+webostv: !include configuration/webostv.yaml
