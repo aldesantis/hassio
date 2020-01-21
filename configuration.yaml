@@ -5,7 +5,6 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 wake_on_lan:
 device_tracker: !include device_trackers.yaml
-light: !include lights.yaml
 lovelace: !include lovelace.yaml
 zone: !include zones.yaml
 speedtestdotnet:
