@@ -54,7 +54,7 @@
   action:
   - data:
       message: Cloe è arrivata a casa!
-    service: notify.notify
+    service: notify.ios_iphone_di_alessandro
 - alias: Dim lights at night
   trigger:
     platform: event
