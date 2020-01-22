@@ -1,10 +1,11 @@
 language: python
 python:
-  - "3.5"
+  - "3.8"
 before_install:
   - mv travis_secrets.yaml secrets.yaml
-  - sudo apt-get install -y libudev-dev
+  - sudo apt-get install -y libudev-dev libcups2-dev libbluetooth-dev
 install:
-  - pip3 install homeassistant getmac==0.8.1
+  - pip3 install --upgrade pip
+  - pip3 install homeassistant==$(cat .HA_VERSION) getmac==0.8.1
 script:
   - hass -c . --script check_config
