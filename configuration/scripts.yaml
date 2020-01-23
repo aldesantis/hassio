@@ -12,13 +12,14 @@ turn_lights_off:
       data:
         entity_id:
           - light.camera_da_letto
-          - light.vetrina
+          - light.sala_da_pranzo
           - light.cucina
           - light.ingresso
           - light.lampada
           - light.bagno_ospiti
           - light.bagno_padronale
           - light.studio
+          - light.disimpegno
 
 close_blinds:
   alias: Close the blinds
