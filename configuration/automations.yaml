@@ -24,6 +24,7 @@
       input:
         command: upload
     service: hassio.addon_stdin
+
 - id: '1574456791337'
   alias: Notify Cloe when Alessandro gets home
   trigger:
@@ -36,6 +37,7 @@
   - data:
       message: Alessandro è arrivato a casa!
     service: notify.ios_iphone_di_cloe
+
 - id: '1574456831122'
   alias: Notify Alessandro when Cloe gets home
   trigger:
@@ -48,27 +50,3 @@
   - data:
       message: Cloe è arrivata a casa!
     service: notify.ios_iphone_di_alessandro
-- alias: Dim lights at night
-  trigger:
-    platform: event
-    event_type: state_changed
-  condition:
-    condition: and
-    conditions:
-    - condition: template
-      value_template: '{{ trigger.event.data.entity_id.startswith(''light.'') }}'
-    - condition: template
-      value_template: '{{ trigger.event.data.old_state.state != ''on'' }}'
-    - condition: template
-      value_template: '{{ trigger.event.data.new_state.state == ''on'' }}'
-    - condition: template
-      value_template: '{{ trigger.event.data.new_state.brightness > 100 }}'
-    - condition: time
-      after: '23:00:00'
-      before: 05:00:00
-  action:
-    service: light.turn_on
-    data_template:
-      entity_id: '{{ trigger.event.data.entity_id }}'
-    data:
-      brightness: 100
