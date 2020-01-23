@@ -1,9 +1,11 @@
 turn_ac_off:
   alias: Turn AC off
   sequence:
-  - data:
-      entity_id: all
-    service: climate.turn_off
+    - service: climate.turn_off
+      data:
+        entity_id:
+          - climate.studio
+          - climate.salone
 
 turn_lights_off:
   alias: Turn lights off
@@ -12,13 +14,14 @@ turn_lights_off:
       data:
         entity_id:
           - light.camera_da_letto
-          - light.vetrina
+          - light.sala_da_pranzo
           - light.cucina
           - light.ingresso
           - light.lampada
           - light.bagno_ospiti
           - light.bagno_padronale
           - light.studio
+          - light.disimpegno
 
 close_blinds:
   alias: Close the blinds
@@ -36,10 +39,18 @@ turn_tv_off:
       data:
         entity_id: media_player.lg_webos_smart_tv
 
+turn_music_off:
+  alias: Turn the music off
+  sequence:
+    - service: media_player.media_pause
+      data:
+        entity_id: media_player.soggiorno
+
 goodnight:
   alias: Goodnight
   sequence:
     - service: script.turn_lights_off
     - service: script.turn_ac_off
     - service: script.turn_tv_off
+    - service: script.turn_music_off
     - service: script.close_blinds
