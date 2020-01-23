@@ -9,6 +9,8 @@
     - service: script.turn_ac_off
     - service: script.turn_lights_off
     - service: script.turn_tv_off
+    - service: script.turn_music_off
+
 - id: '1568486841268'
   alias: Back up to Dropbox nightly
   trigger:
