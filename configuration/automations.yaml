@@ -50,3 +50,14 @@
   - data:
       message: Cloe è arrivata a casa!
     service: notify.ios_iphone_di_alessandro
+
+- id: '1574456831123'
+  alias: Turn on the lights when someone gets home
+  trigger:
+    - entity_id: group.tutti
+      platform: state
+      to: home
+  condition: []
+  action:
+    - service: light.turn_on
+      entity_id: light.ingresso
