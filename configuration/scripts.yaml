@@ -39,10 +39,18 @@ turn_tv_off:
       data:
         entity_id: media_player.lg_webos_smart_tv
 
+turn_music_off:
+  alias: Turn the music off
+  sequence:
+    - service: media_player.media_pause
+      data:
+        entity_id: media_player.soggiorno
+
 goodnight:
   alias: Goodnight
   sequence:
     - service: script.turn_lights_off
     - service: script.turn_ac_off
     - service: script.turn_tv_off
+    - service: script.turn_music_off
     - service: script.close_blinds
