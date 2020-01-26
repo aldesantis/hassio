@@ -27,8 +27,9 @@ mbpro_di_alessandro:
 iphone_di_cloe:
   name: iPhone di Cloe
   entities:
-    - device_tracker.iphone_di_cloe
+    - device_tracker.iphone_di_cloe_gps
     - device_tracker.iphone_di_cloe_wifi
+    - device_tracker.iphone_di_cloe_bt
 
 laptop_di_cloe:
   name: Laptop di Cloe
