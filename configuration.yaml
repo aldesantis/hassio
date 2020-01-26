@@ -1,14 +1,17 @@
 default_config:
+
+lovelace:
+  mode: yaml
+
 group: !include configuration/groups.yaml
 automation: !include configuration/automations.yaml
 script: !include configuration/scripts.yaml
-wake_on_lan:
 device_tracker: !include configuration/device_trackers.yaml
-lovelace:
-  mode: yaml
 zone: !include configuration/zones.yaml
-speedtestdotnet:
 sensor:
-  - !include configuration/cups.yaml
   - !include configuration/system_monitor.yaml
+
+wake_on_lan:
 webostv: !include configuration/webostv.yaml
+
+speedtestdotnet:

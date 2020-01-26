@@ -1,5 +1,0 @@
-platform: cups
-is_cups_server: false
-host: !secret printer_host
-printers:
-  - ipp/print
