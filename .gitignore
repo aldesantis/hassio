@@ -11,3 +11,4 @@ known_devices.yaml
 tts
 webostv.conf
 custom_components
+*.pickle
