@@ -2,7 +2,7 @@ platform: template
 sensors:
   stufa_current_power:
     friendly_name: "Potenza attuale"
-    unit_of_measurement: 'w'
+    unit_of_measurement: 'W'
     value_template: "{{ state_attr('switch.stufa', 'current_power_w') }}"
     icon_template: fas:bolt
   stufa_today_consumption:
