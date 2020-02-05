@@ -12,3 +12,5 @@ tts
 webostv.conf
 custom_components
 *.pickle
+*.db-shm
+*.db-wal
