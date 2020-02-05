@@ -6,6 +6,9 @@ turn_ac_off:
         entity_id:
           - climate.studio
           - climate.salone
+    - service: switch.turn_off
+      data:
+        entity_id: switch.stufa
 
 turn_lights_off:
   alias: Turn lights off
