@@ -19,3 +19,12 @@ cards:
         entities:
           - sensor.esterno_studio_temperature
           - sensor.interno_studio_temperature
+  - type: vertical-stack
+    cards:
+      - type: entity-button
+        entity: switch.stufa
+        icon: fas:fire
+      - type: glance
+        entities:
+          - sensor.stufa_current_power
+          - sensor.stufa_today_consumption
