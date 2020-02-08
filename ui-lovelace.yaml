@@ -1,4 +1,7 @@
 title: Casa
+resources:
+  - url: /community_plugin/vertical-stack-in-card/vertical-stack-in-card.js
+    type: js
 views:
   - !include ui-lovelace/people.yaml
   - !include ui-lovelace/climate.yaml
