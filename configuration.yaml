@@ -12,3 +12,5 @@ sensor:
 wake_on_lan:
 webostv: !include configuration/webostv.yaml
 speedtestdotnet:
+http: !include configuration/http.yaml
+homeconnect: !include configuration/homeconnect.yaml
