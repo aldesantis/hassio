@@ -9,24 +9,50 @@ badges:
     name: Cloe
     image: /local/people/cloe.jpg
 cards:
-  - type: glance
-    title: Alessandro
-    entities:
-      - entity: group.iphone_di_alessandro
-        name: iPhone
-        icon: fas:mobile-alt
-      - entity: group.ipad_di_alessandro
-        name: iPad
-        icon: fas:tablet-alt
-      - entity: group.mbpro_di_alessandro
-        name: MacBook Pro
-        icon: fas:laptop
-  - type: glance
-    title: Cloe
-    entities:
-      - entity: group.iphone_di_cloe
-        name: iPhone
-        icon: fas:mobile-alt
-      - entity: group.laptop_di_cloe
-        name: Laptop
-        icon: fas:laptop
+  - type: "custom:vertical-stack-in-card"
+    cards:
+        - type: glance
+          title: Alessandro
+          entities:
+            - entity: group.iphone_di_alessandro
+              name: iPhone
+              icon: fas:mobile-alt
+            - entity: group.ipad_di_alessandro
+              name: iPad
+              icon: fas:tablet-alt
+            - entity: group.mbpro_di_alessandro
+              name: MacBook Pro
+              icon: fas:laptop
+        - type: glance
+          entities:
+            - entity: sensor.withings_weight_kg_alessandro
+              name: Peso
+            - entity: sensor.withings_fat_ratio_pct_alessandro
+              icon: fas:balance-scale
+              name: Grasso
+            - entity: sensor.withings_muscle_mass_kg_alessandro
+              name: Muscolo
+            - entity: sensor.withings_bone_mass_kg_alessandro
+              name: Ossa
+  - type: "custom:vertical-stack-in-card"
+    cards:
+      - type: glance
+        title: Cloe
+        entities:
+          - entity: group.iphone_di_cloe
+            name: iPhone
+            icon: fas:mobile-alt
+          - entity: group.laptop_di_cloe
+            name: Laptop
+            icon: fas:laptop
+      - type: glance
+        entities:
+          - entity: sensor.withings_weight_kg_cloe
+            name: Peso
+          - entity: sensor.withings_fat_ratio_pct_cloe
+            icon: fas:balance-scale
+            name: Grasso
+          - entity: sensor.withings_muscle_mass_kg_cloe
+            name: Muscolo
+          - entity: sensor.withings_bone_mass_kg_cloe
+            name: Ossa
