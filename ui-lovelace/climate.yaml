@@ -3,7 +3,7 @@ path: climate
 icon: fas:thermometer-half
 badges: []
 cards:
-  - type: vertical-stack
+  - type: custom:vertical-stack-in-card
     cards:
       - type: thermostat
         entity: climate.salone
@@ -11,7 +11,7 @@ cards:
         entities:
           - sensor.esterno_salone_temperature
           - sensor.interno_salone_temperature
-  - type: vertical-stack
+  - type: custom:vertical-stack-in-card
     cards:
       - type: thermostat
         entity: climate.studio
@@ -19,7 +19,7 @@ cards:
         entities:
           - sensor.esterno_studio_temperature
           - sensor.interno_studio_temperature
-  - type: vertical-stack
+  - type: custom:vertical-stack-in-card
     cards:
       - type: entity-button
         entity: switch.stufa
