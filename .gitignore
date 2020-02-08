@@ -13,3 +13,4 @@ webostv.conf
 *.pickle
 *.db-shm
 *.db-wal
+custom_components/*/__pycache__
