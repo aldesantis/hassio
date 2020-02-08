@@ -26,6 +26,15 @@ turn_lights_off:
           - light.studio
           - light.disimpegno
 
+open_blinds:
+  alias: Open the blinds
+  sequence:
+    - service: cover.open_cover
+      data:
+        entity_id:
+          - cover.camera_da_letto_centrale
+          - cover.camera_da_letto_laterale
+
 close_blinds:
   alias: Close the blinds
   sequence:
