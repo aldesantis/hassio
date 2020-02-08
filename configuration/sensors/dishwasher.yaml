@@ -1,0 +1,50 @@
+platform: template
+sensors:
+  dishwasher_operation_state:
+    friendly_name: "Stato"
+    unit_of_measurement: ''
+    value_template: "{{ state_attr('switch.lavastoviglie', 'operation_state') }}"
+    icon_template: fas:bolt
+  dishwasher_program:
+    friendly_name: "Programma selezionato"
+    unit_of_measurement: ''
+    value_template: "{{ state_attr('switch.lavastoviglie', 'active_program') or state_attr('switch.lavastoviglie', 'selected_program') }}"
+  dishwasher_remaining_program_time:
+    friendly_name: Tempo rimanente
+    value_template: >-
+      {% set time = states('sensor.lavastoviglie_remaining_program_time') | int %}
+      {% set minutes = ((time % 3600) / 60) | int %}
+      {% set hours = ((time % 86400) / 3600) | int %}
+      {% set days = (time / 86400) | int %}
+
+      {%- if time < 60 -%}
+        Less than a minute
+      {%- else -%}
+        {%- if days > 0 -%}
+          {%- if days == 1 -%}
+            1 day
+          {%- else -%}
+            {{ days }} days
+          {%- endif -%}
+        {%- endif -%}
+        {%- if hours > 0 -%}
+          {%- if days > 0 -%}
+            {{ ', ' }}
+          {%- endif -%}
+          {%- if hours == 1 -%}
+            1 hour
+          {%- else -%}
+            {{ hours }} hours
+          {%- endif -%}
+        {%- endif -%}
+        {%- if minutes > 0 -%}
+          {%- if days > 0 or hours > 0 -%}
+            {{ ', ' }}
+          {%- endif -%}
+          {%- if minutes == 1 -%}
+            1 minute
+          {%- else -%}
+            {{ minutes }} minutes
+          {%- endif -%}
+        {%- endif -%}
+      {%- endif -%}

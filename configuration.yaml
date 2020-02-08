@@ -9,6 +9,7 @@ zone: !include configuration/zones.yaml
 sensor:
   - !include configuration/sensors/system_monitor.yaml
   - !include configuration/sensors/heater.yaml
+  - !include configuration/sensors/dishwasher.yaml
 wake_on_lan:
 webostv: !include configuration/webostv.yaml
 speedtestdotnet:

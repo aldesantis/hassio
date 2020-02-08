@@ -6,6 +6,7 @@ views:
   - !include ui-lovelace/people.yaml
   - !include ui-lovelace/climate.yaml
   - !include ui-lovelace/lights.yaml
+  - !include ui-lovelace/appliances.yaml
   - !include ui-lovelace/blinds.yaml
   - !include ui-lovelace/entertainment.yaml
   - !include ui-lovelace/system.yaml

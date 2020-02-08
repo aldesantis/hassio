@@ -1,0 +1,31 @@
+title: Elettrodomestici
+path: appliances
+icon: fas:blender
+badges: []
+cards:
+  - type: entities
+    title: Lavastoviglie
+    show_header_toggle: false
+    state_color: true
+    header:
+      image: /local/appliances/dishwasher.jpg
+      type: picture
+    entities:
+      - entity: switch.lavastoviglie
+        name: Alimentazione
+      - entity: binary_sensor.lavastoviglie_door
+        name: Porta
+      - type: conditional
+        conditions:
+          - entity: sensor.dishwasher_operation_state
+            state: run
+        row:
+          entity: sensor.dishwasher_program
+          name: Programma
+      - type: conditional
+        conditions:
+          - entity: sensor.dishwasher_operation_state
+            state: run
+        row:
+          entity: sensor.dishwasher_remaining_program_time
+          name: Durata rimanente
