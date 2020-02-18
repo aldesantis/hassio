@@ -14,3 +14,4 @@ webostv.conf
 *.db-shm
 *.db-wal
 **/__pycache__
+fitbit.conf
