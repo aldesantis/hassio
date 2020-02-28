@@ -1,6 +1,6 @@
 # Home Assistant configuration
 
-[![Build Status](https://travis-ci.org/aldesantis/hassio.svg?branch=master)](https://travis-ci.org/aldesantis/hassio)
+[![Build Status](https://travis-ci.org/aldesantis/home-assistant.svg?branch=master)](https://travis-ci.org/aldesantis/home-assistant)
 
 This is my personal Home Assistant configuration. Feel free to do whatever you like with it!
 
