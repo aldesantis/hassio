@@ -16,7 +16,7 @@ cards:
             graph: line
           - type: sensor
             entity: sensor.interno_salone_temperature
-            name: Interno studio
+            name: Interno salone
             graph: line
   - type: vertical-stack
     cards:
@@ -42,7 +42,7 @@ cards:
         cards:
           - type: sensor
             entity: sensor.stufa_current_power
-            name: Potenza istantanea
+            name: Condumo attuale
           - type: sensor
             entity: sensor.stufa_today_consumption
             name: Consumo odierno
