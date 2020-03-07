@@ -27,10 +27,3 @@ cards:
         name: Upload
         icon: fas:upload
         graph: line
-  - type: glance
-    title: Stampante
-    entities:
-      - sensor.hl_l3230cdw_black_toner_remaining
-      - sensor.hl_l3230cdw_cyan_toner_remaining
-      - sensor.hl_l3230cdw_yellow_toner_remaining
-      - sensor.hl_l3230cdw_magenta_toner_remaining

@@ -1,0 +1,123 @@
+title: Giorno
+path: day
+badges: []
+icon: fas:sun
+cards:
+  - type: custom:banner-card
+    heading: "🚪 Ingresso"
+    entities:
+      - entity: light.ingresso
+        size: 3
+        name: Soffitto
+
+  - type: custom:banner-card
+    heading: "🍳 Cucina"
+    entities:
+      - entity: light.cucina
+        size: 3
+        name: Soffitto
+
+  - type: custom:banner-card
+    heading: "🍴 Sala da pranzo"
+    entities:
+      - entity: light.vetrina
+        size: 3
+
+  - type: custom:banner-card
+    heading: "🛋️ Salone"
+    entities:
+      - entity: light.lampada
+      - entity: media_player.lg_webos_smart_tv
+        name: TV
+        action:
+          service: media_player.toggle
+        map_state:
+          "on": Spegni
+          "off": Accendi
+      - entity: media_player.soggiorno
+        name: Sonos
+        action:
+          service: media_player.media_play_pause
+        map_state:
+          paused: Play
+          playing: Pausa
+      - entity: climate.salone
+        name: Climatizzatore
+        map_state:
+          "fan_only":
+            value: "🌬️"
+            action:
+              service: climate.turn_off
+          "dry":
+            value: "🌵"
+            action:
+              service: climate.turn_off
+          "cool":
+            value: "❄️"
+            action:
+              service: climate.turn_off
+          "heat":
+            value: "🔥"
+            action:
+              service: climate.turn_off
+          "heat_cool":
+            value: "🤖"
+            action:
+              service: climate.turn_off
+          "off":
+            value: "❌"
+            action:
+              service: climate.turn_on
+      - entity: sensor.interno_salone_temperature
+        name: Interno
+      - entity: sensor.esterno_salone_temperature
+        name: Esterno
+
+  - type: custom:banner-card
+    heading: "🚽 Bagno ospiti"
+    entities:
+      - entity: light.bagno_ospiti
+        size: 3
+        name: Soffitto
+
+  - type: custom:banner-card
+    heading: "🖥️ Studio"
+    entities:
+      - entity: light.ingresso_studio
+        size: 1
+        name: Ingresso
+      - entity: light.soffitto_studio
+        size: 2
+        name: Soffitto
+      - entity: climate.studio
+        name: Climatizzatore
+        map_state:
+          "fan_only":
+            value: "🌬️"
+            action:
+              service: climate.turn_off
+          "dry":
+            value: "🌵"
+            action:
+              service: climate.turn_off
+          "cool":
+            value: "❄️"
+            action:
+              service: climate.turn_off
+          "heat":
+            value: "🔥"
+            action:
+              service: climate.turn_off
+          "heat_cool":
+            value: "🤖"
+            action:
+              service: climate.turn_off
+          "off":
+            value: "❌"
+            action:
+              service: climate.turn_on
+
+      - entity: sensor.interno_studio_temperature
+        name: Interno
+      - entity: sensor.esterno_studio_temperature
+        name: Esterno
