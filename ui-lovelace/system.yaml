@@ -3,29 +3,30 @@ title: Sistema
 icon: fas:server
 badges: []
 cards:
-  - type: horizontal-stack
-    cards:
-      - type: gauge
-        entity: sensor.disk_use_percent
-        name: Disk
-      - type: gauge
-        entity: sensor.memory_use_percent
-        name: Memory
-      - type: gauge
-        entity: sensor.processor_use
+  - type: "custom:mini-graph-card"
+    name: Sistema
+    entities:
+      - entity: sensor.disk_use_percent
+        name: Disco
+      - entity: sensor.memory_use_percent
+        name: Memoria
+      - entity: sensor.processor_use
         name: CPU
-  - type: glance
-    title: Speedtest
+  - type: "custom:mini-graph-card"
+    name: Rete
     entities:
       - entity: sensor.speedtest_ping
         name: Ping
         icon: fas:wifi
+        graph: line
       - entity: sensor.speedtest_download
         name: Download
         icon: fas:download
+        graph: line
       - entity: sensor.speedtest_upload
         name: Upload
         icon: fas:upload
+        graph: line
   - type: glance
     title: Stampante
     entities:
