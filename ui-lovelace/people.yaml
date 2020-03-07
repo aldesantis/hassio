@@ -9,7 +9,7 @@ badges:
     name: Cloe
     image: /local/people/cloe.jpg
 cards:
-  - type: "custom:vertical-stack-in-card"
+  - type: vertical-stack
     cards:
         - type: glance
           title: Alessandro
@@ -23,7 +23,7 @@ cards:
             - entity: group.mbpro_di_alessandro
               name: MacBook Pro
               icon: fas:laptop
-        - type: glance
+        - type: "custom:mini-graph-card"
           entities:
             - entity: sensor.withings_weight_kg_alessandro
               name: Peso
@@ -34,7 +34,7 @@ cards:
               name: Muscolo
             - entity: sensor.withings_bone_mass_kg_alessandro
               name: Ossa
-  - type: "custom:vertical-stack-in-card"
+  - type: vertical-stack
     cards:
       - type: glance
         title: Cloe
@@ -45,7 +45,7 @@ cards:
           - entity: group.laptop_di_cloe
             name: Laptop
             icon: fas:laptop
-      - type: glance
+      - type: "custom:mini-graph-card"
         entities:
           - entity: sensor.withings_weight_kg_cloe
             name: Peso
