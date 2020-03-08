@@ -1,0 +1,53 @@
+title: Notte
+path: night
+badges: []
+icon: fas:moon
+cards:
+  - type: custom:banner-card
+    heading: "🚶 Disimpegno"
+    entities:
+      - entity: light.disimpegno
+        size: 3
+        name: Soffitto
+
+  - type: custom:banner-card
+    heading: "🛌 Camera da letto"
+    entities:
+      - entity: light.ingresso_camera_da_letto
+        name: Ingresso
+      - entity: light.soffitto_camera_da_letto
+        name: Soffitto
+      - entity: light.comodino_sinistro
+        name: Com. sx
+      - entity: light.comodino_destro
+        name: Com. dx
+      - entity: cover.camera_da_letto_laterale
+        name: Tenda laterale
+      - entity: cover.camera_da_letto_centrale
+        name: Tenda centrale
+      - entity: switch.stufa
+        action:
+          service: switch.toggle
+        map_state:
+          "on":
+            value: "🔥"
+          "off":
+            value: "❌"
+      - entity: sensor.stufa_current_power
+        name: Cons. attuale
+      - entity: sensor.stufa_today_consumption
+        name: Cons. odierno
+      - entity: script.goodnight
+        name: ''
+        size: 3
+        action:
+          service: script.goodnight
+        map_state:
+          "off": Buonanotte
+
+  - type: custom:banner-card
+    heading: "🛀 Bagno padronale"
+    entities:
+      - entity: light.bagno_padronale
+        size: 3
+        name: Soffitto

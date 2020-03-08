@@ -4,11 +4,10 @@ resources:
     type: js
   - url: /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
     type: module
+  - url: /hacsfiles/banner-card/banner-card.js
+    type: module
 views:
   - !include ui-lovelace/people.yaml
-  - !include ui-lovelace/climate.yaml
-  - !include ui-lovelace/lights.yaml
-  - !include ui-lovelace/blinds.yaml
-  - !include ui-lovelace/entertainment.yaml
+  - !include ui-lovelace/day.yaml
+  - !include ui-lovelace/night.yaml
   - !include ui-lovelace/system.yaml
-  - !include ui-lovelace/scripts.yaml

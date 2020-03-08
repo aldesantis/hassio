@@ -11,18 +11,30 @@ badges:
 cards:
   - type: vertical-stack
     cards:
-        - type: glance
-          title: Alessandro
+        - type: custom:banner-card
+          heading: 👨 Alessandro
           entities:
             - entity: group.iphone_di_alessandro
               name: iPhone
-              icon: fas:mobile-alt
+              map_state:
+                "home":
+                  value: 🏠
+                "not_home":
+                  value: 🌍
             - entity: group.ipad_di_alessandro
               name: iPad
-              icon: fas:tablet-alt
+              map_state:
+                "home":
+                  value: 🏠
+                "not_home":
+                  value: 🌍
             - entity: group.mbpro_di_alessandro
               name: MacBook Pro
-              icon: fas:laptop
+              map_state:
+                "home":
+                  value: 🏠
+                "not_home":
+                  value: 🌍
         - type: "custom:mini-graph-card"
           entities:
             - entity: sensor.withings_weight_kg_alessandro
@@ -36,15 +48,26 @@ cards:
               name: Ossa
   - type: vertical-stack
     cards:
-      - type: glance
-        title: Cloe
+      - type: custom:banner-card
+        heading: 👩 Cloe
+        row_size: 4
         entities:
           - entity: group.iphone_di_cloe
             name: iPhone
-            icon: fas:mobile-alt
+            size: 2
+            map_state:
+              "home":
+                value: 🏠
+              "not_home":
+                value: 🌍
           - entity: group.laptop_di_cloe
             name: Laptop
-            icon: fas:laptop
+            size: 2
+            map_state:
+              "home":
+                value: 🏠
+              "not_home":
+                value: 🌍
       - type: "custom:mini-graph-card"
         entities:
           - entity: sensor.withings_weight_kg_cloe
