@@ -1,6 +1,8 @@
 default_config:
 lovelace:
   mode: yaml
+frontend:
+  themes: !include_dir_merge_named themes
 group: !include configuration/groups.yaml
 automation: !include configuration/automations.yaml
 script: !include configuration/scripts.yaml
