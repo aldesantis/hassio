@@ -17,3 +17,4 @@ speedtestdotnet:
 http: !include configuration/http.yaml
 homeconnect: !include configuration/homeconnect.yaml
 withings: !include configuration/withings.yaml
+influxdb: !include configuration/influxdb.yaml
