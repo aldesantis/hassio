@@ -9,7 +9,7 @@ badges:
     name: Cloe
     image: /local/people/cloe.jpg
 cards:
-  - type: vertical-stack
+  - type: "custom:vertical-stack-in-card"
     cards:
         - type: custom:banner-card
           heading: 👨 Alessandro
@@ -35,7 +35,7 @@ cards:
                   value: 🏠
                 "not_home":
                   value: 🌍
-        - type: "custom:mini-graph-card"
+        - type: glance
           entities:
             - entity: sensor.withings_weight_kg_alessandro
               name: Peso
@@ -46,7 +46,7 @@ cards:
               name: Muscolo
             - entity: sensor.withings_bone_mass_kg_alessandro
               name: Ossa
-  - type: vertical-stack
+  - type: "custom:vertical-stack-in-card"
     cards:
       - type: custom:banner-card
         heading: 👩 Cloe
@@ -68,7 +68,7 @@ cards:
                 value: 🏠
               "not_home":
                 value: 🌍
-      - type: "custom:mini-graph-card"
+      - type: glance
         entities:
           - entity: sensor.withings_weight_kg_cloe
             name: Peso
