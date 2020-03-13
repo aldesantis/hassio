@@ -6,6 +6,12 @@ resources:
     type: module
   - url: /hacsfiles/banner-card/banner-card.js
     type: module
+  - url: /hacsfiles/mini-media-player/mini-media-player-bundle.js
+    type: module
+  - url: /hacsfiles/simple-thermostat/simple-thermostat.js
+    type: module
+  - url: /hacsfiles/lovelace-card-mod/card-mod.js
+    type: module
 views:
   - !include ui-lovelace/people.yaml
   - !include ui-lovelace/day.yaml

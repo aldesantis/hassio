@@ -23,55 +23,64 @@ cards:
       - entity: light.vetrina
         size: 3
 
-  - type: custom:banner-card
-    heading: "🛋️ Salone"
-    entities:
-      - entity: light.lampada
-      - entity: media_player.lg_webos_smart_tv
-        name: TV
-        action:
-          service: media_player.toggle
-        map_state:
-          "on": Spegni
-          "off": Accendi
-      - entity: media_player.soggiorno
-        name: Sonos
-        action:
-          service: media_player.media_play_pause
-        map_state:
-          paused: Play
-          playing: Pausa
-      - entity: climate.salone
-        name: Climatizzatore
-        map_state:
-          "fan_only":
-            value: "🌬️"
-            action:
-              service: climate.turn_off
-          "dry":
-            value: "🌵"
-            action:
-              service: climate.turn_off
-          "cool":
-            value: "❄️"
-            action:
-              service: climate.turn_off
-          "heat":
-            value: "🔥"
-            action:
-              service: climate.turn_off
-          "heat_cool":
-            value: "🤖"
-            action:
-              service: climate.turn_off
-          "off":
-            value: "❌"
-            action:
-              service: climate.turn_on
-      - entity: sensor.interno_salone_temperature
-        name: Interno
-      - entity: sensor.esterno_salone_temperature
-        name: Esterno
+  - type: custom:vertical-stack-in-card
+    cards:
+      - type: custom:banner-card
+        heading: "🛋️ Salone"
+        entities:
+          - entity: light.lampada
+            size: 3
+      - type: custom:mini-media-player
+        entity: media_player.lg_webos_smart_tv
+        hide:
+          volume: true
+          power_state: false
+      - type: custom:mini-media-player
+        style: |
+          ha-card {
+            border-top: 1px solid #ddd;
+          }
+        entity: media_player.soggiorno
+        artwork: cover
+        icon: fas:speakers
+        hide:
+          volume: true
+          source: true
+          power: true
+          sound_mode: false
+      - type: custom:simple-thermostat
+        style: |
+          ha-card {
+            border-top: 1px solid #ddd;
+          }
+
+          .modes {
+            margin-top: 0 !important;
+            margin-left: 16px;
+            margin-right: 16px;
+            gap: 10px !important;
+            padding-bottom: 0 !important;
+          }
+        entity: climate.salone
+        name: false
+        decimals: 0
+        step_size: 1
+        step_layout: row
+        hide:
+          temperature: true
+        control:
+          hvac:
+            fan_only: false
+            dry: false
+            cool: true
+            heat: true
+            heat_cool: false
+            "off": true
+        sensors:
+          - entity: sensor.interno_salone_temperature
+            name: Interno
+          - entity: sensor.esterno_salone_temperature
+            name: Esterno
 
   - type: custom:banner-card
     heading: "🚽 Bagno ospiti"
@@ -80,44 +89,48 @@ cards:
         size: 3
         name: Soffitto
 
-  - type: custom:banner-card
-    heading: "🖥️ Studio"
-    entities:
-      - entity: light.ingresso_studio
-        size: 1
-        name: Ingresso
-      - entity: light.soffitto_studio
-        size: 2
-        name: Soffitto
-      - entity: climate.studio
-        name: Climatizzatore
-        map_state:
-          "fan_only":
-            value: "🌬️"
-            action:
-              service: climate.turn_off
-          "dry":
-            value: "🌵"
-            action:
-              service: climate.turn_off
-          "cool":
-            value: "❄️"
-            action:
-              service: climate.turn_off
-          "heat":
-            value: "🔥"
-            action:
-              service: climate.turn_off
-          "heat_cool":
-            value: "🤖"
-            action:
-              service: climate.turn_off
-          "off":
-            value: "❌"
-            action:
-              service: climate.turn_on
+  - type: custom:vertical-stack-in-card
+    cards:
+      - type: custom:banner-card
+        heading: "🖥️ Studio"
+        row_size: 4
+        entities:
+          - entity: light.ingresso_studio
+            size: 2
+            name: Ingresso
+          - entity: light.soffitto_studio
+            size: 2
+            name: Soffitto
+      - type: custom:simple-thermostat
+        style: |
+          ha-card {
+            border-top: 1px solid #ddd;
+          }
 
-      - entity: sensor.interno_studio_temperature
-        name: Interno
-      - entity: sensor.esterno_studio_temperature
-        name: Esterno
+          .modes {
+            margin-top: 0 !important;
+            margin-left: 16px;
+            margin-right: 16px;
+            gap: 10px !important;
+            padding-bottom: 0 !important;
+          }
+        entity: climate.studio
+        name: false
+        decimals: 0
+        step_size: 1
+        step_layout: row
+        hide:
+          temperature: true
+        control:
+          hvac:
+            fan_only: false
+            dry: false
+            cool: true
+            heat: true
+            heat_cool: false
+            "off": true
+        sensors:
+          - entity: sensor.interno_studio_temperature
+            name: Interno
+          - entity: sensor.esterno_studio_temperature
+            name: Esterno
