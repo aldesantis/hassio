@@ -12,6 +12,10 @@ resources:
     type: module
   - url: /hacsfiles/lovelace-card-mod/card-mod.js
     type: module
+  - url: /hacsfiles/button-card/button-card.js
+    type: module
+  - url: /hacsfiles/lovelace-fold-entity-row/fold-entity-row.js
+    type: module
 views:
   - !include ui-lovelace/people.yaml
   - !include ui-lovelace/day.yaml

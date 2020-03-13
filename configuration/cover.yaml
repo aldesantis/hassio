@@ -1,0 +1,5 @@
+- platform: group
+  name: Camera da letto
+  entities:
+    - cover.camera_da_letto_laterale
+    - cover.camera_da_letto_centrale

@@ -39,13 +39,17 @@ cards:
           entities:
             - entity: sensor.withings_weight_kg_alessandro
               name: Peso
+              icon: fas:weight
             - entity: sensor.withings_fat_ratio_pct_alessandro
-              icon: fas:balance-scale
+              icon: fas:drumstick
               name: Grasso
             - entity: sensor.withings_muscle_mass_kg_alessandro
               name: Muscolo
+              icon: fas:dumbbell
             - entity: sensor.withings_bone_mass_kg_alessandro
               name: Ossa
+              icon: fas:bone
+
   - type: "custom:vertical-stack-in-card"
     cards:
       - type: custom:banner-card
@@ -72,10 +76,13 @@ cards:
         entities:
           - entity: sensor.withings_weight_kg_cloe
             name: Peso
+            icon: fas:weight
           - entity: sensor.withings_fat_ratio_pct_cloe
-            icon: fas:balance-scale
+            icon: fas:drumstick
             name: Grasso
           - entity: sensor.withings_muscle_mass_kg_cloe
             name: Muscolo
+            icon: fas:dumbbell
           - entity: sensor.withings_bone_mass_kg_cloe
             name: Ossa
+            icon: fas:bone

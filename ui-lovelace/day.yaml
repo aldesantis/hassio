@@ -3,25 +3,27 @@ path: day
 badges: []
 icon: fas:sun
 cards:
-  - type: custom:banner-card
-    heading: "🚪 Ingresso"
-    entities:
-      - entity: light.ingresso
-        size: 3
-        name: Soffitto
+  - type: vertical-stack
+    cards:
+      - type: custom:banner-card
+        heading: "🚪 Ingresso"
+        entities:
+          - entity: light.ingresso
+            size: 3
+            name: Soffitto
 
-  - type: custom:banner-card
-    heading: "🍳 Cucina"
-    entities:
-      - entity: light.cucina
-        size: 3
-        name: Soffitto
+      - type: custom:banner-card
+        heading: "🍳 Cucina"
+        entities:
+          - entity: light.cucina
+            size: 3
+            name: Soffitto
 
-  - type: custom:banner-card
-    heading: "🍴 Sala da pranzo"
-    entities:
-      - entity: light.vetrina
-        size: 3
+      - type: custom:banner-card
+        heading: "🍴 Sala da pranzo"
+        entities:
+          - entity: light.vetrina
+            size: 3
 
   - type: custom:vertical-stack-in-card
     cards:
@@ -35,23 +37,41 @@ cards:
         hide:
           volume: true
           power_state: false
+      - type: conditional
+        conditions:
+          - entity: media_player.lg_webos_smart_tv
+            state: "on"
+        card:
+          type: custom:mini-media-player
+          style: |
+            ha-card {
+              border-top: 2px solid var(--secondary-background-color);
+            }
+          entity: media_player.playstation_4
+          icon: fab:playstation
+          hide:
+            source: false
+            power: false
+            power_state: false
+            sound_mode: true
+            volume: true
+            controls: true
       - type: custom:mini-media-player
         style: |
           ha-card {
-            border-top: 1px solid #ddd;
+            border-top: 2px solid var(--secondary-background-color);
           }
         entity: media_player.soggiorno
-        artwork: cover
         icon: fas:speakers
         hide:
-          volume: true
           source: true
           power: true
           sound_mode: false
+          volume: true
       - type: custom:simple-thermostat
         style: |
           ha-card {
-            border-top: 1px solid #ddd;
+            border-top: 2px solid var(--secondary-background-color);
           }
 
           .modes {
@@ -81,13 +101,19 @@ cards:
             name: Interno
           - entity: sensor.esterno_salone_temperature
             name: Esterno
-
-  - type: custom:banner-card
-    heading: "🚽 Bagno ospiti"
-    entities:
-      - entity: light.bagno_ospiti
-        size: 3
-        name: Soffitto
+      - type: custom:button-card
+        entity: script.movie_time
+        icon: fas:popcorn
+        show_name: false
+        show_state: false
+        size: 25px
+        styles:
+          card:
+            - border-top: '2px solid var(--secondary-background-color)'
+            - padding-top: 16px
+            - padding-bottom: 16px
+          icon:
+            - color: '#FF4136'
 
   - type: custom:vertical-stack-in-card
     cards:
@@ -101,10 +127,35 @@ cards:
           - entity: light.soffitto_studio
             size: 2
             name: Soffitto
+      - type: entities
+        style: |
+          .card-content {
+            padding-top: 8px;
+            padding-bottom: 8px;
+          }
+        entities:
+          - type: custom:fold-entity-row
+            head:
+              entity: sensor.hl_l3230cdw_status
+              icon: fas:print
+              name: Stampante
+            entities:
+              - entity: sensor.hl_l3230cdw_black_toner_remaining
+                name: BK
+                icon: fas:tint
+              - entity: sensor.hl_l3230cdw_cyan_toner_remaining
+                name: C
+                icon: fas:tint
+              - entity: sensor.hl_l3230cdw_magenta_toner_remaining
+                name: M
+                icon: fas:tint
+              - entity: sensor.hl_l3230cdw_yellow_toner_remaining
+                name: Y
+                icon: fas:tint
       - type: custom:simple-thermostat
         style: |
           ha-card {
-            border-top: 1px solid #ddd;
+            border-top: 2px solid var(--secondary-background-color);
           }
 
           .modes {
