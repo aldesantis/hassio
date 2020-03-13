@@ -6,24 +6,21 @@ cards:
   - type: "custom:mini-graph-card"
     name: Sistema
     entities:
+      - entity: sensor.processor_use
+        name: CPU
       - entity: sensor.disk_use_percent
         name: Disco
       - entity: sensor.memory_use_percent
         name: Memoria
-      - entity: sensor.processor_use
-        name: CPU
-  - type: "custom:mini-graph-card"
-    name: Rete
+  - type: glance
+    title: Rete
     entities:
       - entity: sensor.speedtest_ping
         name: Ping
         icon: fas:wifi
-        graph: line
       - entity: sensor.speedtest_download
         name: Download
         icon: fas:download
-        graph: line
       - entity: sensor.speedtest_upload
         name: Upload
         icon: fas:upload
-        graph: line
