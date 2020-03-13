@@ -1,0 +1,15 @@
+icon: fas:lightbulb
+show_name: true
+show_state: false
+size: 15px
+color_type: card
+color: '#FFDC00'
+styles:
+  card:
+    - box-shadow: none
+    - border: none
+    - padding-top: 16px
+    - padding-bottom: 16px
+  name:
+    - padding-top: 8px
+    - font-size: 12px

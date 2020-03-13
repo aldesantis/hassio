@@ -1,4 +1,5 @@
 title: Casa
+
 resources:
   - url: /hacsfiles/vertical-stack-in-card/vertical-stack-in-card.js
     type: js
@@ -16,8 +17,14 @@ resources:
     type: module
   - url: /hacsfiles/lovelace-fold-entity-row/fold-entity-row.js
     type: module
+  - url: /hacsfiles/decluttering-card/decluttering-card.js
+    type: module
+
+decluttering_templates: !include_dir_named ui-lovelace/decluttering_templates
+button_card_templates: !include_dir_named ui-lovelace/button_card_templates
+
 views:
-  - !include ui-lovelace/people.yaml
-  - !include ui-lovelace/day.yaml
-  - !include ui-lovelace/night.yaml
-  - !include ui-lovelace/system.yaml
+  - !include ui-lovelace/views/people.yaml
+  - !include ui-lovelace/views/day.yaml
+  - !include ui-lovelace/views/night.yaml
+  - !include ui-lovelace/views/system.yaml
