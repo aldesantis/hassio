@@ -44,6 +44,19 @@ close_blinds:
           - cover.camera_da_letto_centrale
           - cover.camera_da_letto_laterale
 
+movie_time:
+  alias: Movie time!
+  sequence:
+    - service: script.turn_tv_on
+    - service: script.turn_lights_off
+
+turn_tv_on:
+  alias: Turn TV on
+  sequence:
+    - service: media_player.turn_on
+      data:
+        entity_id: media_player.lg_webos_smart_tv
+
 turn_tv_off:
   alias: Turn TV off
   sequence:

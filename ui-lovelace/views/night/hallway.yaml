@@ -1,0 +1,20 @@
+type: vertical-stack
+cards:
+  - type: custom:decluttering-card
+    template: header_banner
+    variables:
+      - heading: 🚶 Disimpegno
+  - type: custom:mod-card
+    style: |
+      ha-card {
+        display: block;
+        margin-top: -8px;
+      }
+    card:
+      type: horizontal-stack
+      cards:
+        - type: custom:decluttering-card
+          template: light_button
+          variables:
+            - name: Soffitto
+            - entity: light.disimpegno

@@ -1,0 +1,9 @@
+title: Notte
+path: night
+badges: []
+icon: fas:moon
+cards:
+  - !include night/hallway.yaml
+  - !include night/bedroom.yaml
+  - !include night/master_bathroom.yaml
+  - !include night/guest_bathroom.yaml

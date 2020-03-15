@@ -1,0 +1,129 @@
+type: vertical-stack
+cards:
+  - type: custom:decluttering-card
+    template: header_banner
+    variables:
+      - heading: 🛌 Camera da letto
+
+  - type: entities
+    style: |
+      ha-card {
+        border-radius: 0;
+        box-shadow: 1px 3px 3px 0px rgb(230, 230, 230);
+      }
+
+      .card-content {
+        border-top: 2px solid var(--secondary-background-color);
+        margin-top: -8px;
+        padding: 0;
+      }
+
+      #states > * {
+        margin: 0 !important;
+      }
+    entities:
+      - type: custom:hui-horizontal-stack-card
+        style: |
+          #root > * {
+            margin-left: 0 !important;
+            margin-right: 0 !important;
+          }
+        cards:
+          - type: custom:button-card
+            template: light_middle
+            name: Ingresso
+            entity: light.ingresso_camera_da_letto
+          - type: custom:button-card
+            template: light_middle
+            name: Soffitto
+            entity: light.soffitto_camera_da_letto
+          - type: custom:button-card
+            template: light_middle
+            name: Comodino sx
+            entity: light.comodino_sinistro
+          - type: custom:button-card
+            template: light_middle
+            name: Comodino dx
+            entity: light.comodino_destro
+
+  - type: entities
+    style: |
+      ha-card {
+        border-radius: 0;
+        box-shadow: 1px 3px 3px 0px rgb(230, 230, 230);
+      }
+
+      .card-content {
+        border-top: 2px solid var(--secondary-background-color);
+        margin-top: -8px;
+        padding-top: 8px;
+        padding-bottom: 8px;
+      }
+    entities:
+      - type: custom:fold-entity-row
+        style: |
+          ha-card {
+            border-top: 1px solid #eee;
+          }
+        head:
+          entity: cover.camera_da_letto
+          name: Tende
+        entities:
+          - entity: cover.camera_da_letto_centrale
+            name: Centrale
+          - entity: cover.camera_da_letto_centrale
+            name: Laterale
+      - type: custom:fold-entity-row
+        head:
+          entity: switch.stufa
+          icon: fas:heat
+        entities:
+          - entity: sensor.stufa_current_power
+            name: Consumo attuale
+          - entity: sensor.stufa_today_consumption
+            name: Consumo odierno
+
+  - type: entities
+    style: |
+      ha-card {
+        border-radius: 0 0 var(--ha-card-border-radius) var(--ha-card-border-radius);
+        box-shadow: 1px 3px 3px 0px rgb(230, 230, 230);
+      }
+
+      .card-content {
+        border-top: 2px solid var(--secondary-background-color);
+        margin-top: -8px;
+        padding: 0;
+      }
+
+      #states > * {
+        margin: 0 !important;
+      }
+    entities:
+      - type: custom:hui-horizontal-stack-card
+        style: |
+          ha-card {
+            border-top: 1px solid #eee;
+          }
+        cards:
+          - type: custom:button-card
+            template: script
+            entity: script.goodnight
+            icon: fas:sun
+            styles:
+              icon:
+                - color: '#FF851B'
+          - type: custom:button-card
+            template: script
+            entity: script.goodnight
+            icon: fas:glasses
+            styles:
+              icon:
+                - color: '#0074D9'
+          - type: custom:button-card
+            template: script
+            entity: script.goodnight
+            icon: fas:moon
+            styles:
+              icon:
+                - color: '#FFDC00'

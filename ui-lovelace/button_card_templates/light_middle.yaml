@@ -1,0 +1,4 @@
+template: light
+styles:
+  card:
+    - border-radius: 0
