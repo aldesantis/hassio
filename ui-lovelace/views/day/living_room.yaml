@@ -31,12 +31,21 @@ entities:
         name: Lampada
         entity: light.lampada
 
+  - type: divider
+    style: |
+      div {
+        background-color: var(--divider-color);
+        height: 2px;
+      }
+
   - type: custom:mini-media-player
     style: |
       ha-card {
         border-radius: 0;
         box-shadow: none;
-        border-top: 2px solid var(--divider-color);
+      }
+      .mmp-player {
+        padding-bottom: 8px !important;
       }
     entity: media_player.lg_webos_smart_tv
     hide:
@@ -54,6 +63,10 @@ entities:
           border-radius: 0;
           box-shadow: none;
         }
+        .mmp-player {
+          padding-top: 8px !important;
+          padding-bottom: 8px !important;
+        }
       entity: media_player.playstation_4
       icon: fab:playstation
       hide:
@@ -70,6 +83,9 @@ entities:
         border-radius: 0;
         box-shadow: none;
       }
+       .mmp-player {
+         padding-top: 8px !important;
+       }
     entity: media_player.soggiorno
     icon: fas:speakers
     hide:
