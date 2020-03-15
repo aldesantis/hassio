@@ -49,6 +49,7 @@ entities:
         padding-right: 16px !important;
       }
       #items[open] {
+        margin-top: -16px;
         margin-bottom: 16px !important;
       }
     head:

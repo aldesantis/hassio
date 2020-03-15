@@ -55,12 +55,14 @@ entities:
       #head {
         padding-top: 16px;
         padding-left: 16px;
+        padding-bottom: 8px;
       }
       #items {
         padding-left: 36px !important;
         padding-right: 16px !important;
       }
       #items[open] {
+        margin-top: -8px;
         margin-bottom: 8px !important;
       }
     head:
@@ -84,6 +86,7 @@ entities:
         padding-right: 16px !important;
       }
       #items[open] {
+        margin-top: -16px;
         margin-bottom: 16px !important;
       }
     head:
