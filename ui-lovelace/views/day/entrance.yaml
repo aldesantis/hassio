@@ -1,29 +1,6 @@
-type: vertical-stack
-cards:
-  - type: custom:decluttering-card
-    template: header_banner
-    variables:
-      - heading: 🚪 Ingresso
-
-  - type: entities
-    style: |
-      ha-card {
-        box-shadow: 1px 3px 3px 0px rgb(230, 230, 230);
-      }
-
-      .card-content {
-        border-top: 2px solid var(--secondary-background-color);
-        margin-top: -8px;
-        padding: 0;
-      }
-
-      #states > * {
-        margin: 0 !important;
-      }
-    entities:
-      - type: custom:hui-horizontal-stack-card
-        cards:
-          - type: custom:button-card
-            template: light_bottom
-            name: Soffitto
-            entity: light.ingresso
+type: custom:decluttering-card
+template: one_light_room
+variables:
+  - name: 🚪 Ingresso
+  - light_name: Soffitto
+  - light_entity: light.ingresso

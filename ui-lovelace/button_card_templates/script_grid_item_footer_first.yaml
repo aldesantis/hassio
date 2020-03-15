@@ -1,0 +1,4 @@
+template: script_grid_item_footer
+styles:
+  card:
+    - border-radius: 0 0 0 var(--ha-card-border-radius)

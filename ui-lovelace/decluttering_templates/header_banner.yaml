@@ -1,7 +1,9 @@
 card:
   type: custom:banner-card
-  heading: '[[heading]]'
   style: |
     ha-card {
+      box-shadow: none;
+      border: 0;
       border-radius: var(--ha-card-border-radius) var(--ha-card-border-radius) 0 0;
     }
+  heading: '[[heading]]'

@@ -1,145 +1,116 @@
-type: vertical-stack
-cards:
+type: entities
+style: |
+  .card-content {
+    padding: 0;
+  }
+  #states > * {
+    margin: 0 !important;
+  }
+entities:
   - type: custom:decluttering-card
     template: header_banner
     variables:
       - heading: 🛋️ Salone
 
-  - type: entities
+  - type: divider
     style: |
-      ha-card {
-        box-shadow: 1px 3px 3px 0px rgb(230, 230, 230);
+      div {
+        background-color: var(--divider-color);
+        height: 2px;
       }
 
-      .card-content {
-        border-top: 2px solid var(--secondary-background-color);
-        margin-top: -8px;
-        padding: 0;
+  - type: custom:hui-horizontal-stack-card
+    style: |
+      #root > * {
+        margin-left: 0;
+        margin-right: 0;
       }
+    cards:
+      - type: custom:button-card
+        template: light_grid_item_middle
+        name: Lampada
+        entity: light.lampada
 
-      #states > * {
-        margin: 0 !important;
-      }
-    entities:
-      - type: custom:hui-horizontal-stack-card
-        style: |
-          #root > *:first-child {
-            margin-right: 0;
-          }
-
-          #root > *:last-child {
-            margin-left: 0;
-          }
-        cards:
-          - type: custom:button-card
-            template: light_middle
-            name: Lampada
-            entity: light.lampada
-
-  - type: entities
+  - type: custom:mini-media-player
     style: |
       ha-card {
         border-radius: 0;
-        box-shadow: 1px 3px 3px 0px rgb(230, 230, 230);
+        box-shadow: none;
+        border-top: 2px solid var(--divider-color);
       }
+    entity: media_player.lg_webos_smart_tv
+    hide:
+      volume: true
+      power_state: false
 
-      .card-content {
-        border-top: 2px solid var(--secondary-background-color);
-        margin-top: -8px;
-        padding-top: 8px;
-        padding-bottom: 8px;
+  - type: custom:hui-conditional-card
+    conditions:
+      - entity: media_player.lg_webos_smart_tv
+        state: "on"
+    card:
+      type: custom:mini-media-player
+      style: |
+        ha-card {
+          border-radius: 0;
+          box-shadow: none;
+        }
+      entity: media_player.playstation_4
+      icon: fab:playstation
+      hide:
+        source: false
+        power: false
+        power_state: false
+        sound_mode: true
+        volume: true
+        controls: true
+
+  - type: custom:mini-media-player
+    style: |
+      ha-card {
+        border-radius: 0;
+        box-shadow: none;
       }
-    entities:
-      - type: custom:mini-media-player
-        style: |
-          ha-card {
-            border: 0;
-            box-shadow: none;
-          }
-          .mmp-player {
-            padding: 0 !important;
-          }
-        entity: media_player.lg_webos_smart_tv
-        hide:
-          volume: true
-          power_state: false
+    entity: media_player.soggiorno
+    icon: fas:speakers
+    hide:
+      source: true
+      power: true
+      sound_mode: false
+      volume: true
+      progress: true
 
-      - type: custom:hui-conditional-card
-        conditions:
-          - entity: media_player.lg_webos_smart_tv
-            state: "on"
-        card:
-          type: custom:mini-media-player
-          style: |
-            ha-card {
-              border: 0;
-              box-shadow: none;
-            }
-            .mmp-player {
-              padding: 0 !important;
-            }
-          entity: media_player.playstation_4
-          icon: fab:playstation
-          hide:
-            source: false
-            power: false
-            power_state: false
-            sound_mode: true
-            volume: true
-            controls: true
-
-      - type: custom:mini-media-player
-        style: |
-          ha-card {
-            border: 0;
-            box-shadow: none;
-          }
-          .mmp-player {
-            padding: 0 !important;
-          }
-        entity: media_player.soggiorno
-        icon: fas:speakers
-        hide:
-          source: true
-          power: true
-          sound_mode: false
-          volume: true
-          progress: true
+  - type: divider
+    style: |
+      div {
+        background-color: var(--divider-color);
+        height: 2px;
+      }
 
   - type: custom:decluttering-card
-    template: thermostat_middle
+    template: thermostat
     variables:
       - entity: climate.salone
       - inside_temp_sensor: sensor.interno_salone_temperature
       - outside_temp_sensor: sensor.esterno_salone_temperature
 
-  - type: entities
+  - type: divider
     style: |
-      ha-card {
-        border-radius: 0 0 var(--ha-card-border-radius) var(--ha-card-border-radius);
-        box-shadow: 1px 3px 3px 0px rgb(230, 230, 230);
-        margin-top: -16px;
+      div {
+        background-color: var(--divider-color);
+        height: 2px;
       }
 
-      .card-content {
-        border-top: 2px solid var(--secondary-background-color);
-        padding: 0;
+  - type: custom:hui-horizontal-stack-card
+    style: |
+      #root > * {
+        margin-left: 0;
+        margin-right: 0;
       }
-
-      #states > * {
-        margin: 0 !important;
-      }
-    entities:
-      - type: custom:hui-horizontal-stack-card
-        style: |
-          ha-card {
-            border-top: 1px solid #eee;
-          }
-        cards:
-          - type: custom:button-card
-            template: script
-            entity: script.movie_time
-            icon: fas:popcorn
-            styles:
-              icon:
-                - color: '#FF4136'
+    cards:
+      - type: custom:button-card
+        template: script_grid_item_footer
+        entity: script.movie_time
+        icon: fas:popcorn
+        styles:
+          icon:
+            - color: '#FF4136'

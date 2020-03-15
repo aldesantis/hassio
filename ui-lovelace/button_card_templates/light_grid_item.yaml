@@ -1,0 +1,5 @@
+template: light
+styles:
+  card:
+    - box-shadow: none
+    - border: 0

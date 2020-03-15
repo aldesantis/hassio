@@ -4,8 +4,5 @@ size: 25px
 color_type: card
 styles:
   card:
-    - border-top: '2px solid var(--secondary-background-color)'
     - padding-top: 16px
     - padding-bottom: 16px
-    - border: none
-    - box-shadow: none

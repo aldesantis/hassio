@@ -1,0 +1,34 @@
+card:
+  type: custom:simple-thermostat
+  style: |
+    ha-card {
+      box-shadow: none;
+    }
+
+    .modes {
+      margin-top: 0 !important;
+      margin-left: 16px;
+      margin-right: 16px;
+      gap: 10px !important;
+      padding-bottom: 0 !important;
+    }
+  entity: '[[entity]]'
+  name: false
+  decimals: 0
+  step_size: 1
+  step_layout: row
+  hide:
+    temperature: true
+  control:
+    hvac:
+      fan_only: false
+      dry: false
+      cool: true
+      heat: true
+      heat_cool: false
+      "off": true
+  sensors:
+    - entity: '[[inside_temp_sensor]]'
+      name: Interno
+    - entity: '[[outside_temp_sensor]]'
+      name: Esterno

@@ -1,4 +1,4 @@
-template: light
+template: script_grid_item
 styles:
   card:
     - border-radius: 0 0 var(--ha-card-border-radius) var(--ha-card-border-radius)
