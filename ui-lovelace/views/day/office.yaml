@@ -25,10 +25,12 @@ entities:
         template: light_grid_item_middle
         name: Ingresso
         entity: light.ingresso_studio
+        icon: fas:dungeon
       - type: custom:button-card
         template: light_grid_item_middle
         name: Soffitto
         entity: light.soffitto_studio
+        icon: fas:light-ceiling
 
   - type: divider
     style: |

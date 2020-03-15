@@ -1,3 +1,5 @@
+default:
+  - light_icon: fas:light-ceiling
 card:
   type: entities
   style: |
@@ -31,3 +33,4 @@ card:
           template: light_grid_item_footer
           name: '[[light_name]]'
           entity: '[[light_entity]]'
+          icon: '[[light_icon]]'

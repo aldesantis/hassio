@@ -30,6 +30,7 @@ entities:
         template: light_grid_item_middle
         name: Lampada
         entity: light.lampada
+        icon: fas:lamp-floor
 
   - type: divider
     style: |
