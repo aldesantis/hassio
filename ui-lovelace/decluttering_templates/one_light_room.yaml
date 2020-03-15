@@ -1,0 +1,33 @@
+card:
+  type: entities
+  style: |
+    .card-content {
+      padding: 0;
+    }
+    #states > * {
+      margin: 0 !important;
+    }
+  entities:
+    - type: custom:decluttering-card
+      template: header_banner
+      variables:
+        - heading: '[[name]]'
+
+    - type: divider
+      style: |
+        div {
+          background-color: var(--divider-color);
+          height: 2px;
+        }
+
+    - type: custom:hui-horizontal-stack-card
+      style: |
+        #root > * {
+          margin-left: 0;
+          margin-right: 0;
+        }
+      cards:
+        - type: custom:button-card
+          template: light_grid_item_footer
+          name: '[[light_name]]'
+          entity: '[[light_entity]]'

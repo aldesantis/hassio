@@ -1,80 +1,83 @@
-type: vertical-stack
-cards:
+type: entities
+style: |
+  .card-content {
+    padding: 0;
+  }
+  #states > * {
+    margin: 0 !important;
+  }
+entities:
   - type: custom:decluttering-card
     template: header_banner
     variables:
       - heading: 🖥️ Studio
 
-  - type: entities
+  - type: divider
     style: |
-      ha-card {
-        box-shadow: 1px 3px 3px 0px rgb(230, 230, 230);
+      div {
+        background-color: var(--divider-color);
+        height: 2px;
       }
 
-      .card-content {
-        border-top: 2px solid var(--secondary-background-color);
-        margin-top: -8px;
-        padding: 0;
-      }
+  - type: custom:hui-horizontal-stack-card
+    cards:
+      - type: custom:button-card
+        template: light_grid_item_middle
+        name: Ingresso
+        entity: light.ingresso_studio
+      - type: custom:button-card
+        template: light_grid_item_middle
+        name: Soffitto
+        entity: light.soffitto_studio
 
-      #states > * {
-        margin: 0 !important;
-      }
-    entities:
-      - type: custom:hui-horizontal-stack-card
-        style: |
-          #root > *:first-child {
-            margin-right: 0;
-          }
-
-          #root > *:last-child {
-            margin-left: 0;
-          }
-        cards:
-          - type: custom:button-card
-            template: light_middle
-            name: Ingresso
-            entity: light.ingresso_studio
-          - type: custom:button-card
-            template: light_middle
-            name: Soffitto
-            entity: light.soffitto_studio
-
-  - type: entities
+  - type: divider
     style: |
-      ha-card {
-        border-radius: 0;
-        box-shadow: 1px 3px 3px 0px rgb(230, 230, 230);
+      div {
+        background-color: var(--divider-color);
+        height: 2px;
       }
 
-      .card-content {
-        border-top: 2px solid var(--secondary-background-color);
-        margin-top: -8px;
-        padding-top: 8px;
-        padding-bottom: 8px;
+  - type: custom:fold-entity-row
+    style: |
+      #head {
+        padding-top: 16px;
+        padding-left: 16px;
+        padding-bottom: 16px;
       }
+      #items {
+        padding-left: 36px !important;
+        padding-right: 16px !important;
+      }
+      #items[open] {
+        margin-bottom: 16px !important;
+      }
+    head:
+      entity: sensor.hl_l3230cdw_status
+      icon: fas:print
+      name: Stampante
     entities:
-      - type: custom:fold-entity-row
-        head:
-          entity: sensor.hl_l3230cdw_status
-          icon: fas:print
-          name: Stampante
-        entities:
-          - entity: sensor.hl_l3230cdw_black_toner_remaining
-            name: BK
-            icon: fas:tint
-          - entity: sensor.hl_l3230cdw_cyan_toner_remaining
-            name: C
-            icon: fas:tint
-          - entity: sensor.hl_l3230cdw_magenta_toner_remaining
-            name: M
-            icon: fas:tint
-          - entity: sensor.hl_l3230cdw_yellow_toner_remaining
-            name: Y
-            icon: fas:tint
+      - entity: sensor.hl_l3230cdw_black_toner_remaining
+        name: BK
+        icon: fas:tint
+      - entity: sensor.hl_l3230cdw_cyan_toner_remaining
+        name: C
+        icon: fas:tint
+      - entity: sensor.hl_l3230cdw_magenta_toner_remaining
+        name: M
+        icon: fas:tint
+      - entity: sensor.hl_l3230cdw_yellow_toner_remaining
+        name: Y
+        icon: fas:tint
+
+  - type: divider
+    style: |
+      div {
+        background-color: var(--divider-color);
+        height: 2px;
+      }
 
   - type: custom:decluttering-card
-    template: thermostat_bottom
+    template: thermostat
     variables:
       - entity: climate.studio
       - inside_temp_sensor: sensor.interno_studio_temperature

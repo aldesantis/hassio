@@ -1,4 +1,5 @@
-template: light
+template: light_grid_item
 styles:
   card:
     - border-radius: 0
+
