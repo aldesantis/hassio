@@ -11,3 +11,6 @@ styles:
   name:
     - padding-top: 8px
     - font-size: 12px
+  icon:
+    - height: 20px
+    - width: auto

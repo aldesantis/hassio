@@ -30,18 +30,22 @@ entities:
         template: light_grid_item_middle
         name: Ingresso
         entity: light.ingresso_camera_da_letto
+        icon: fas:dungeon
       - type: custom:button-card
         template: light_grid_item_middle
         name: Soffitto
         entity: light.soffitto_camera_da_letto
+        icon: fas:light-ceiling
       - type: custom:button-card
         template: light_grid_item_middle
         name: Comodino sx
         entity: light.comodino_sinistro
+        icon: fas:bed-alt
       - type: custom:button-card
         template: light_grid_item_middle
         name: Comodino dx
         entity: light.comodino_destro
+        icon: fas:bed-alt
 
   - type: divider
     style: |
