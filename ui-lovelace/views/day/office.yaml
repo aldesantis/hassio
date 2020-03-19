@@ -20,6 +20,11 @@ entities:
       }
 
   - type: custom:hui-horizontal-stack-card
+    style: |
+      #root > * {
+        margin-left: 0;
+        margin-right: 0;
+      }
     cards:
       - type: custom:button-card
         template: light_grid_item_middle
