@@ -53,30 +53,25 @@ entities:
       volume: true
       power_state: false
 
-  - type: custom:hui-conditional-card
-    conditions:
-      - entity: media_player.lg_webos_smart_tv
-        state: "on"
-    card:
-      type: custom:mini-media-player
-      style: |
-        ha-card {
-          border-radius: 0;
-          box-shadow: none;
-        }
-        .mmp-player {
-          padding-top: 8px !important;
-          padding-bottom: 8px !important;
-        }
-      entity: media_player.playstation_4
-      icon: fab:playstation
-      hide:
-        source: false
-        power: false
-        power_state: false
-        sound_mode: true
-        volume: true
-        controls: true
+  - type: custom:mini-media-player
+    style: |
+      ha-card {
+        border-radius: 0;
+        box-shadow: none;
+      }
+      .mmp-player {
+        padding-top: 8px !important;
+        padding-bottom: 8px !important;
+      }
+    entity: media_player.playstation_4
+    icon: fab:playstation
+    hide:
+      source: false
+      power: false
+      power_state: false
+      sound_mode: true
+      volume: true
+      controls: true
 
   - type: custom:mini-media-player
     style: |

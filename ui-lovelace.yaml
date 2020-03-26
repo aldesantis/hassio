@@ -19,6 +19,7 @@ resources:
     type: module
 
 decluttering_templates: !include_dir_named ui-lovelace/decluttering_templates
+
 button_card_templates: !include_dir_named ui-lovelace/button_card_templates
 
 views:
