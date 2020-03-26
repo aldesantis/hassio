@@ -1,0 +1,20 @@
+card:
+  type: glance
+  style: |
+    ha-card {
+      border: none;
+      box-shadow: none;
+    }
+  entities:
+    - entity: 'sensor.withings_weight_kg_[[person]]'
+      name: Peso
+      icon: fas:weight
+    - entity: 'sensor.withings_fat_ratio_pct_[[person]]'
+      icon: fas:drumstick
+      name: Grasso
+    - entity: 'sensor.withings_muscle_mass_kg_[[person]]'
+      name: Muscolo
+      icon: fas:dumbbell
+    - entity: 'sensor.withings_bone_mass_kg_[[person]]'
+      name: Ossa
+      icon: fas:bone

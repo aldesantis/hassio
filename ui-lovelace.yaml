@@ -1,8 +1,6 @@
 title: Casa
 
 resources:
-  - url: /hacsfiles/vertical-stack-in-card/vertical-stack-in-card.js
-    type: module
   - url: /hacsfiles/mini-graph-card/mini-graph-card-bundle.js
     type: module
   - url: /hacsfiles/banner-card/banner-card.js
@@ -21,6 +19,7 @@ resources:
     type: module
 
 decluttering_templates: !include_dir_named ui-lovelace/decluttering_templates
+
 button_card_templates: !include_dir_named ui-lovelace/button_card_templates
 
 views:
