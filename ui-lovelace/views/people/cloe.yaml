@@ -1,0 +1,46 @@
+type: entities
+style: |
+  .card-content {
+    padding: 0;
+  }
+  #states > * {
+    margin: 0 !important;
+  }
+entities:
+  - type: custom:decluttering-card
+    template: header_banner
+    variables:
+      - heading: 👩 Cloe
+
+  - type: divider
+    style: |
+      div {
+        background-color: var(--divider-color);
+        height: 2px;
+      }
+
+  - type: custom:hui-glance-card
+    style: |
+      ha-card {
+        border: none;
+        box-shadow: none;
+      }
+    entities:
+      - entity: group.iphone_di_cloe
+        name: iPhone
+        icon: fas:mobile-alt
+      - entity: group.laptop_di_cloe
+        name: Laptop
+        icon: fas:laptop
+
+  - type: divider
+    style: |
+      div {
+        background-color: var(--divider-color);
+        height: 2px;
+      }
+
+  - type: custom:decluttering-card
+    template: vitals_glance
+    variables:
+      - person: cloe

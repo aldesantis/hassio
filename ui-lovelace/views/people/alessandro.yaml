@@ -1,0 +1,49 @@
+type: entities
+style: |
+  .card-content {
+    padding: 0;
+  }
+  #states > * {
+    margin: 0 !important;
+  }
+entities:
+  - type: custom:decluttering-card
+    template: header_banner
+    variables:
+      - heading: 👨 Alessandro
+
+  - type: divider
+    style: |
+      div {
+        background-color: var(--divider-color);
+        height: 2px;
+      }
+
+  - type: custom:hui-glance-card
+    style: |
+      ha-card {
+        border: none;
+        box-shadow: none;
+      }
+    entities:
+      - entity: group.iphone_di_alessandro
+        name: iPhone
+        icon: fas:mobile-alt
+      - entity: group.ipad_di_alessandro
+        name: iPad
+        icon: fas:tablet-alt
+      - entity: group.mbpro_di_alessandro
+        name: MB Pro
+        icon: fas:laptop
+
+  - type: divider
+    style: |
+      div {
+        background-color: var(--divider-color);
+        height: 2px;
+      }
+
+  - type: custom:decluttering-card
+    template: vitals_glance
+    variables:
+      - person: alessandro
