@@ -22,8 +22,8 @@ entities:
   - type: custom:hui-horizontal-stack-card
     style: |
       #root > * {
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
       }
     cards:
       - type: custom:button-card
@@ -115,8 +115,8 @@ entities:
   - type: custom:hui-horizontal-stack-card
     style: |
       #root > * {
-        margin-left: 0;
-        margin-right: 0;
+        margin-left: 0 !important;
+        margin-right: 0 !important;
       }
     cards:
       - type: custom:button-card
