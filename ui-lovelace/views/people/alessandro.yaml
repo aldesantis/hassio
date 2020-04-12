@@ -6,12 +6,15 @@ style: |
   #states > * {
     margin: 0 !important;
   }
+  .card-header {
+    padding-bottom: 24px;
+  }
+  .card-header > .name {
+    width: 100%;
+    text-align: center;
+  }
+title: 👨 Alessandro
 entities:
-  - type: custom:decluttering-card
-    template: header_banner
-    variables:
-      - heading: 👨 Alessandro
-
   - type: divider
     style: |
       div {
