@@ -14,3 +14,11 @@ styles:
   icon:
     - height: 20px
     - width: auto
+tap_action:
+  action: toggle
+  haptic: success
+hold_action:
+  action: more-info
+double_tap_action:
+  action: more-info
+  haptic: light

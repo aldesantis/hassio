@@ -9,12 +9,15 @@ card:
     #states > * {
       margin: 0 !important;
     }
+    .card-header {
+      padding-bottom: 24px;
+    }
+    .card-header > .name {
+      width: 100%;
+      text-align: center;
+    }
+  title: '[[name]]'
   entities:
-    - type: custom:decluttering-card
-      template: header_banner
-      variables:
-        - heading: '[[name]]'
-
     - type: divider
       style: |
         div {

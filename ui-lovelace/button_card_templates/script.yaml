@@ -6,3 +6,6 @@ styles:
   card:
     - padding-top: 16px
     - padding-bottom: 16px
+tap_action:
+  action: toggle
+  haptic: success
