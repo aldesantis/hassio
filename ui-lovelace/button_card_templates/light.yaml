@@ -14,3 +14,6 @@ styles:
   icon:
     - height: 20px
     - width: auto
+tap_action:
+  action: toggle
+  haptic: success
