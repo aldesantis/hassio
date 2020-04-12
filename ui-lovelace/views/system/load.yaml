@@ -1,0 +1,9 @@
+type: "custom:mini-graph-card"
+name: Carico
+entities:
+  - entity: sensor.processor_use
+    name: CPU
+  - entity: sensor.disk_use_percent
+    name: Disco
+  - entity: sensor.memory_use_percent
+    name: Memoria
