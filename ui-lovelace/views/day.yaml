@@ -3,8 +3,8 @@ path: day
 badges: []
 icon: fas:sun
 cards:
+  - !include day/living_room.yaml
+  - !include day/office.yaml
   - !include day/entrance.yaml
   - !include day/kitchen.yaml
   - !include day/dining_room.yaml
-  - !include day/living_room.yaml
-  - !include day/office.yaml
