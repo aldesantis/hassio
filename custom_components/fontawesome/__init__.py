@@ -11,8 +11,6 @@ ICON_FILES = {
     'regular': 'far.js',
     'solid': 'fas.js',
     'brands': 'fab.js',
-    'light': 'fal.js',
-    'duotone': 'fad.js',
 }
 
 async def async_setup(hass, config):
