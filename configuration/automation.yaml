@@ -50,3 +50,33 @@
   - data:
       message: Cloe è arrivata a casa!
     service: notify.ios_iphone_di_alessandro
+
+- id: 'turn_lights_off_when_opening_blinds'
+  alias: Turn lights off when blinds are opened
+  trigger:
+    - platform: state
+      entity_id: cover.camera_da_letto
+      to: open
+  condition:
+    condition: state
+    entity_id: sun.sun
+    state: above_horizon
+  action:
+    - service: light.turn_off
+      data:
+        entity_id: light.camera_da_letto
+
+- id: 'turn_lights_on_when_closing_blinds'
+  alias: Turn lights on when blinds are closed
+  trigger:
+    - platform: state
+      entity_id: cover.camera_da_letto
+      to: closed
+  condition:
+    condition: time
+    after: '08:00:00'
+    before: '23:00:00'
+  action:
+    - service: light.turn_on
+      data:
+        entity_id: light.camera_da_letto
