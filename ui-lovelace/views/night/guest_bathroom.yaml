@@ -1,6 +1,48 @@
-type: custom:decluttering-card
-template: one_light_room
-variables:
-  - name: 🚽 Bagno ospiti
-  - light_name: Soffitto
-  - light_entity: light.bagno_ospiti
+type: entities
+style: |
+  .card-content {
+    padding: 0;
+  }
+  #states > * {
+    margin: 0 !important;
+  }
+  .card-header {
+    padding-bottom: 24px;
+  }
+  .card-header > .name {
+    width: 100%;
+    text-align: center;
+  }
+title: 🚽 Bagno ospiti
+entities:
+  - type: divider
+    style: |
+      div {
+        background-color: var(--divider-color);
+        height: 2px;
+      }
+
+  - type: custom:hui-horizontal-stack-card
+    style: |
+      #root > * {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+      }
+    cards:
+      - type: custom:button-card
+        template: light_grid_item_footer
+        name: Soffitto
+        entity: light.bagno_ospiti
+        icon: fas:light-ceiling
+
+  - type: divider
+    style: |
+      div {
+        background-color: var(--divider-color);
+        height: 2px;
+      }
+
+  - type: custom:decluttering-card
+    template: echo_dot
+    variables:
+      - entity: media_player.echo_dot_bagno_ospiti

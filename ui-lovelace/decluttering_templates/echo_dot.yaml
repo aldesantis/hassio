@@ -1,0 +1,16 @@
+card:
+  type: custom:mini-media-player
+  style: |
+    ha-card {
+      border-radius: 0;
+      box-shadow: none;
+    }
+    .mmp-player {
+      padding-bottom: 8px !important;
+    }
+  entity: '[[entity]]'
+  hide:
+    volume: false
+    controls: true
+    power: true
+    source: true

@@ -88,6 +88,18 @@ entities:
       }
 
   - type: custom:decluttering-card
+    template: echo_dot
+    variables:
+      - entity: media_player.echo_dot_studio
+
+  - type: divider
+    style: |
+      div {
+        background-color: var(--divider-color);
+        height: 2px;
+      }
+
+  - type: custom:decluttering-card
     template: thermostat
     variables:
       - entity: climate.studio
