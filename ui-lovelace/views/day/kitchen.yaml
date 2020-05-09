@@ -42,6 +42,27 @@ entities:
         height: 2px;
       }
 
+  - type: custom:hui-entities-card
+    style: |
+      ha-card {
+        border-radius: 0;
+        box-shadow: none;
+      }
+    entities:
+      - entity: switch.lavastoviglie
+        icon: fas:hand-sparkles
+      - entity: binary_sensor.lavastoviglie_door
+        icon: fas:door-open
+      - entity: sensor.lavastoviglie_remaining_program_time
+        icon: fas:clock
+
+  - type: divider
+    style: |
+      div {
+        background-color: var(--divider-color);
+        height: 2px;
+      }
+
   - type: custom:decluttering-card
     template: echo_dot
     variables:
