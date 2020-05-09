@@ -5,7 +5,10 @@ card:
       border-radius: 0;
       box-shadow: none;
     }
-    .mmp-player {
+    ha-card.--progress .mmp-player {
+      padding-bottom: 16px !important;
+    }
+    ha-card:not(.--progress) .mmp-player {
       padding-bottom: 8px !important;
     }
   entity: '[[entity]]'
