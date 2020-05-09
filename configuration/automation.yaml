@@ -114,3 +114,25 @@
       entity_id: '{{ trigger.event.data.entity_id }}'
     data:
       brightness: 50
+
+- id: 'turn_light_on_for_calendar_event'
+  alias: Turn light on when calendar event starts
+  trigger:
+    platform: state
+    entity_id: group.calendars
+    to: 'on'
+  action:
+    service: light.turn_on
+    data:
+      entity_id: light.disimpegno
+
+- id: 'turn_light_off_for_calendar_event'
+  alias: Turn light off when calendar event starts
+  trigger:
+    platform: state
+    entity_id: group.calendars
+    to: 'off'
+  action:
+    service: light.turn_off
+    data:
+      entity_id: light.disimpegno

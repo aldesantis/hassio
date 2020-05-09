@@ -36,3 +36,12 @@ laptop_di_cloe:
   entities:
     - device_tracker.laptop_di_cloe_wifi
     - device_tracker.laptop_di_cloe_bt
+
+calendars:
+  name: Calendari
+  entities:
+    - !secret calendar_1
+    - !secret calendar_2
+    - !secret calendar_3
+    - !secret calendar_4
+    - !secret calendar_5

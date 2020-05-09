@@ -15,3 +15,4 @@ webostv.conf
 *.db-wal
 **/__pycache__
 alexa_media*.html
+google_calendars.yaml
