@@ -13,7 +13,9 @@
         "data": {
           "regular": "Include Regular icons (far:)",
           "solid": "Include Solid icons (fas:)",
-          "brands": "Include Brand icons (fab:)"
+          "brands": "Include Brand icons (fab:)",
+          "light": "Include Light icons (fal:)",
+          "duotone": "Include Duotone icons (fad:)"
         }
       }
     }
