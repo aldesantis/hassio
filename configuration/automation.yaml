@@ -88,3 +88,29 @@
       platform: time
   action:
     - service: script.goodnight
+
+- id: 'dim_lights_at_night'
+  alias: Dim lights at night
+  trigger:
+    platform: event
+    event_type: state_changed
+  condition:
+    condition: and
+    conditions:
+    - condition: template
+      value_template: '{{ trigger.event.data.entity_id.startswith(''light.'') }}'
+    - condition: template
+      value_template: '{{ trigger.event.data.old_state.state != ''on'' }}'
+    - condition: template
+      value_template: '{{ trigger.event.data.new_state.state == ''on'' }}'
+    - condition: template
+      value_template: '{{ trigger.event.data.new_state.attributes.brightness > 50 }}'
+    - condition: time
+      before: '08:00:00'
+      after: '23:00:00'
+  action:
+    service: light.turn_on
+    data_template:
+      entity_id: '{{ trigger.event.data.entity_id }}'
+    data:
+      brightness: 50
