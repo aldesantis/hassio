@@ -30,7 +30,7 @@ entities:
       }
     cards:
       - type: custom:button-card
-        template: light_grid_item_footer
+        template: light_grid_item_middle
         name: Soffitto
         entity: light.bagno_padronale
         icon: fas:light-ceiling
