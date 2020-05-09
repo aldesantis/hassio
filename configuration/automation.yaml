@@ -1,4 +1,4 @@
-- id: '1567267090938'
+- id: 'turn_devices_off_when_away'
   alias: Turn devices off when away
   trigger:
   - entity_id: group.tutti
@@ -11,7 +11,7 @@
     - service: script.turn_tv_off
     - service: script.turn_music_off
 
-- id: '1568486841268'
+- id: 'back_up_dropbox_nightly'
   alias: Back up to Dropbox nightly
   trigger:
   - at: 00:00:00
@@ -25,7 +25,7 @@
         command: upload
     service: hassio.addon_stdin
 
-- id: '1574456791337'
+- id: 'notify_cloe_when_alessandro_gets_home'
   alias: Notify Cloe when Alessandro gets home
   trigger:
   - entity_id: person.alessandro_desantis
@@ -38,7 +38,7 @@
       message: Alessandro è arrivato a casa!
     service: notify.ios_iphone_di_cloe
 
-- id: '1574456831122'
+- id: 'notify_alessandro_when_cloe_gets_home'
   alias: Notify Alessandro when Cloe gets home
   trigger:
   - entity_id: person.cloe_filippi
