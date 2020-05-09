@@ -4,4 +4,3 @@ icon: fas:server
 badges: []
 cards:
   - !include system/load.yaml
-  - !include system/network.yaml
