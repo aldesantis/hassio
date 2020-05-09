@@ -10,7 +10,7 @@ card:
     }
   entity: '[[entity]]'
   hide:
-    volume: false
-    controls: true
+    volume: true
+    controls: false
     power: true
     source: true
