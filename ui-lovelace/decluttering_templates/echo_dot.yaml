@@ -12,6 +12,7 @@ card:
       padding-bottom: 8px !important;
     }
   entity: '[[entity]]'
+  icon: mdi:amazon-alexa
   hide:
     volume: true
     controls: false
