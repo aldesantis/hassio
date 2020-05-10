@@ -70,6 +70,13 @@ entities:
         row:
           entity: sensor.lavastoviglie_remaining_program_time
           icon: fas:clock
+      - type: conditional
+        conditions:
+          - entity: sensor.lavastoviglie_operation_state
+            state: run
+        row:
+          entity: sensor.lavastoviglie_running_program
+          icon: fas:sprinkler
 
   - type: divider
     style: |

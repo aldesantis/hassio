@@ -22,6 +22,30 @@
     lavastoviglie_operation_state:
       friendly_name: "Stato lavastoviglie"
       value_template: "{{ state_attr('switch.lavastoviglie', 'operation_state') }}"
+    lavastoviglie_running_program:
+      friendly_name: "Programma attivo"
+      value_template: >
+        {% if state_attr('switch.lavastoviglie', 'active_program') == 'intensiv70' %}
+          Intensivo 70°C
+        {% elif state_attr('switch.lavastoviglie', 'active_program') == 'auto2' %}
+          Auto 45-65°C
+        {% elif state_attr('switch.lavastoviglie', 'active_program') == 'eco50' %}
+          Eco 50°C
+        {% elif state_attr('switch.lavastoviglie', 'active_program') == 'night_wash' %}
+          Programma notturno 50°C
+        {% elif state_attr('switch.lavastoviglie', 'active_program') == 'kurz60' %}
+          Breve 60°C
+        {% elif state_attr('switch.lavastoviglie', 'active_program') == 'glas40' %}
+          Delicato 40°C
+        {% elif state_attr('switch.lavastoviglie', 'active_program') == 'quick45' %}
+          Lavaggio rapido 45°C
+        {% elif state_attr('switch.lavastoviglie', 'active_program') == 'pre_rinse' %}
+          Prelavaggio
+        {% elif state_attr('switch.lavastoviglie', 'active_program') == 'machine_care' %}
+            Cura lavastoviglie
+        {% else %}
+          {{ state_attr('switch.lavastoviglie', 'active_program') }}
+        {% endif %}
     current_theme:
       friendly_name: "Tema attuale"
       value_template: >
