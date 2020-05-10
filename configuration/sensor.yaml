@@ -22,3 +22,11 @@
     lavastoviglie_operation_state:
       friendly_name: "Stato lavastoviglie"
       value_template: "{{ state_attr('switch.lavastoviglie', 'operation_state') }}"
+    current_theme:
+      friendly_name: "Tema attuale"
+      value_template: >
+        {% if states('sun.sun') == 'above_horizon' %}
+          Google Light Theme
+        {% else %}
+          Google Dark Theme
+        {% endif %}

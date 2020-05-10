@@ -137,24 +137,22 @@
     data:
       entity_id: light.disimpegno
 
-- id: 'set_light_theme_at_day'
-  alias: Set light theme at day
+- id: 'set_theme_when_sun_moves'
+  alias: Set theme when sun moves
   trigger:
     platform: state
     entity_id: sun.sun
-    to: above_horizon
   action:
     - service: frontend.set_theme
-      data:
-        name: Google Light Theme
+      data_template:
+        name: "{{ states('sensor.current_theme') }}"
 
-- id: 'set_dark_theme_at_night'
-  alias: Set dark theme at night
+- id: 'set_theme_on_boot'
+  alias: Set theme on boot
   trigger:
-    platform: state
-    entity_id: sun.sun
-    to: below_horizon
+    platform: homeassistant
+    event: start
   action:
     - service: frontend.set_theme
-      data:
-        name: Google Dark Theme
+      data_template:
+        name: "{{ states('sensor.current_theme') }}"
