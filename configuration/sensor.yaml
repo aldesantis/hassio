@@ -17,3 +17,8 @@
     - type: memory_use_percent
     - type: swap_use_percent
     - type: processor_use
+- platform: template
+  sensors:
+    lavastoviglie_operation_state:
+      friendly_name: "Stato lavastoviglie"
+      value_template: "{{ state_attr('switch.lavastoviglie', 'operation_state') }}"

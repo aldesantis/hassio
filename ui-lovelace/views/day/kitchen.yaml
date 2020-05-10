@@ -42,19 +42,34 @@ entities:
         height: 2px;
       }
 
-  - type: custom:hui-entities-card
+  - type: custom:fold-entity-row
     style: |
-      ha-card {
-        border-radius: 0;
-        box-shadow: none;
+      #head {
+        padding-top: 8px;
+        padding-left: 16px;
+        padding-bottom: 16px;
       }
+      #items {
+        padding-left: 36px !important;
+        padding-right: 16px !important;
+      }
+      #items[open] {
+        margin-top: -16px;
+        margin-bottom: 16px !important;
+      }
+    head:
+      entity: switch.lavastoviglie
+      icon: fas:hand-sparkles
     entities:
-      - entity: switch.lavastoviglie
-        icon: fas:hand-sparkles
       - entity: binary_sensor.lavastoviglie_door
         icon: fas:door-open
-      - entity: sensor.lavastoviglie_remaining_program_time
-        icon: fas:clock
+      - type: conditional
+        conditions:
+          - entity: sensor.lavastoviglie_operation_state
+            state: run
+        row:
+          entity: sensor.lavastoviglie_remaining_program_time
+          icon: fas:clock
 
   - type: divider
     style: |
