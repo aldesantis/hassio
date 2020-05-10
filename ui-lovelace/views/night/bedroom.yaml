@@ -133,14 +133,28 @@ entities:
     cards:
       - type: custom:button-card
         template: script_grid_item_footer_first
-        entity: script.goodnight
+        tap_action:
+          action: call-service
+          service: light.turn_on
+          service_data:
+            entity_id: light.camera_da_letto
+            brightness: 255
+            color_temp: 153
+        color_type: icon
         icon: fas:sun
         styles:
           icon:
             - color: '#FF851B'
       - type: custom:button-card
         template: script_grid_item_footer_center
-        entity: script.goodnight
+        tap_action:
+          action: call-service
+          service: light.turn_on
+          service_data:
+            entity_id: light.camera_da_letto
+            brightness: 100
+            color_temp: 500
+        color_type: icon
         icon: fas:glasses
         styles:
           icon:
