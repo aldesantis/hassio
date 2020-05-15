@@ -10,6 +10,7 @@ This is my personal Home Assistant configuration. Feel free to do whatever you l
 ![Day Zone tab](https://raw.githubusercontent.com/aldesantis/home-assistant/master/.screenshots/day-zone.png)
 ![Night Zone tab](https://raw.githubusercontent.com/aldesantis/home-assistant/master/.screenshots/night-zone.png)
 ![System tab](https://raw.githubusercontent.com/aldesantis/home-assistant/master/.screenshots/system.png)
+![Automations](https://raw.githubusercontent.com/aldesantis/home-assistant/master/.screenshots/automations.png)
 
 ## Contributing
 
