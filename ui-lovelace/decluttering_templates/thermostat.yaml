@@ -20,6 +20,7 @@ card:
   hide:
     temperature: true
   control:
+    _headings: false
     hvac:
       fan_only: false
       dry: false
